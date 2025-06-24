@@ -1,3 +1,21 @@
+/* Global Mobile Overflow Prevention */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Ensure all content respects viewport width */
+.committee-container,
+.conference-committee-container,
+.committee-section-wrapper {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 /* Committee Page Styles - White Glass Container */
 
 .committee-container {
@@ -8,7 +26,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .glass-container {
@@ -25,6 +45,7 @@
   margin: 0 auto;
   text-align: center;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .committee-title {
@@ -65,65 +86,54 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .committee-container {
-    padding: 20px 10px;
+    padding: 15px 10px;
+    width: 100%;
+    max-width: 100vw;
   }
   
   .glass-container {
-    padding: 20px 15px;
+    padding: 15px 8px;
     border-radius: 15px;
     max-width: 100%;
-  }
-  
-  .committee-title {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-  }
-  
-  .committee-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 0 10px;
-  }
-  
-  .position-title {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .committee-container {
-    padding: 15px 5px;
-  }
-  
-  .glass-container {
-    padding: 15px 10px;
-    border-radius: 12px;
+    width: calc(100vw - 20px);
+    margin: 0;
   }
   
   .committee-title {
     font-size: 1.6rem;
     margin-bottom: 20px;
+    word-wrap: break-word;
   }
   
   .committee-grid {
+    grid-template-columns: 1fr;
     gap: 20px;
-    padding: 0 5px;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .committee-section {
+    width: 100%;
+    max-width: 100%;
   }
   
   .position-title {
     font-size: 1.1rem;
     margin-bottom: 8px;
+    word-wrap: break-word;
+    text-align: center;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .committee-container {
-    padding: 10px 2px;
+    padding: 10px 5px;
   }
   
   .glass-container {
-    padding: 12px 8px;
+    padding: 12px 5px;
+    border-radius: 12px;
+    width: calc(100vw - 10px);
   }
   
   .committee-title {
@@ -133,11 +143,35 @@
   
   .committee-grid {
     gap: 15px;
-    padding: 0 2px;
+  }
+    .position-title {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 320px) {
+  .committee-container {
+    padding: 8px 2px;
+  }
+  
+  .glass-container {
+    padding: 10px 3px;
+    width: calc(100vw - 4px);
+  }
+  
+  .committee-title {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  
+  .committee-grid {
+    gap: 12px;
+    padding: 0;
   }
   
   .position-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -229,35 +263,52 @@
   overflow-x: auto;
   margin: 0 auto;
   -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .table-wrapper {
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: auto;
+  }
 }
 
 @media (max-width: 480px) {
   .table-wrapper {
-    border-radius: 8px;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    width: 100%;
+    overflow-x: auto;
+    margin: 0;
   }
 }
 
 /* Responsive Table Design */
 @media (max-width: 768px) {
   .committee-table-section {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   
   .table-title {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    word-wrap: break-word;
   }
   
   .committee-table {
-    font-size: 0.85rem;
-    width: 98%;
+    font-size: 0.8rem;
+    width: 100%;
     margin: 0 auto;
+    min-width: 300px;
   }
   
   .committee-table th,
   .committee-table td {
-    padding: 10px 12px;
+    padding: 8px 6px;
+    word-wrap: break-word;
+    hyphens: auto;
   }
   
   .committee-table th:first-child,
@@ -266,56 +317,56 @@
   }
   
   .committee-name {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
   .committee-table-section {
-    margin-top: 25px;
+    margin-top: 15px;
   }
   
-  .table-title {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-  }
-  
-  .committee-table {
-    font-size: 0.75rem;
-    width: 100%;
-  }
-  
-  .committee-table th,
-  .committee-table td {
-    padding: 8px 6px;
-  }
-  
-  .committee-table th {
-    font-size: 0.8rem;
-  }
-  
-  .committee-name {
-    font-size: 0.8rem;
-  }
-  
-  .committee-table td {
-    line-height: 1.3;
-  }
-}
-
-@media (max-width: 320px) {
   .table-title {
     font-size: 1.2rem;
     margin-bottom: 12px;
   }
   
   .committee-table {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
+    width: 100%;
+    min-width: 280px;
   }
   
   .committee-table th,
   .committee-table td {
     padding: 6px 4px;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+  
+  .committee-table th {
+    font-size: 0.8rem;
+  }
+  
+  .committee-name {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .table-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .committee-table {
+    font-size: 0.7rem;
+    min-width: 260px;
+  }
+  
+  .committee-table th,
+  .committee-table td {
+    padding: 4px 2px;
   }
   
   .committee-table th {
@@ -323,8 +374,7 @@
   }
   
   .committee-name {
-    font-size: 0.75rem;
-  }
+    font-size: 0.7rem;  }
 }
 
 /* Conference Committee Container - Separate Styling */
@@ -336,7 +386,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .conference-glass-container {
@@ -348,44 +400,50 @@
     0 8px 32px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
   padding: 40px;
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1200px;  width: 100%;
   margin: 0 auto;
   text-align: center;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* Responsive Design for Conference Committee Container */
 @media (max-width: 768px) {
   .conference-committee-container {
-    padding: 20px 10px;
+    padding: 15px 10px;
+    width: 100%;
+    max-width: 100vw;
   }
   
   .conference-glass-container {
-    padding: 20px 15px;
+    padding: 15px 8px;
     border-radius: 15px;
     max-width: 100%;
+    width: calc(100vw - 20px);
+    margin: 0;
   }
 }
 
 @media (max-width: 480px) {
   .conference-committee-container {
-    padding: 15px 5px;
+    padding: 10px 5px;
   }
   
   .conference-glass-container {
-    padding: 15px 10px;
+    padding: 12px 5px;
     border-radius: 12px;
+    width: calc(100vw - 10px);
   }
 }
 
 @media (max-width: 320px) {
   .conference-committee-container {
-    padding: 10px 2px;
+    padding: 8px 2px;
   }
   
   .conference-glass-container {
-    padding: 12px 8px;
+    padding: 10px 3px;
+    width: calc(100vw - 4px);
   }
 }
 
@@ -423,5 +481,51 @@
   .committee-table td {
     hyphens: auto;
     word-break: break-word;
+  }
+}
+
+/* Mobile-First Table Enhancement */
+@media (max-width: 768px) {
+  .committee-table {
+    table-layout: auto !important;
+    width: 100% !important;
+    min-width: unset !important;
+  }
+  
+  .committee-table th:first-child {
+    width: 35% !important;
+    min-width: 80px;
+  }
+  
+  .committee-table th:last-child {
+    width: 65% !important;
+  }
+  
+  .committee-table td,
+  .committee-table th {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+/* Very Small Screen Optimization */
+@media (max-width: 360px) {
+  .profile-card {
+    width: calc(100vw - 20px) !important;
+    max-width: 300px;
+    margin: 5px auto;
+  }
+  
+  .glass-container,
+  .conference-glass-container {
+    width: calc(100vw - 10px) !important;
+    margin: 0 auto;
+    padding: 8px 5px !important;
+  }
+  
+  .committee-container,
+  .conference-committee-container {
+    padding: 8px 5px !important;
   }
 }
