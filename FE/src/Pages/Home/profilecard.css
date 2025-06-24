@@ -1,0 +1,289 @@
+/* ProfileCard Component Styles - Gold, Blue, and White Theme */
+
+.profile-card {
+  width: 350px;
+  min-height: 450px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 4px 16px rgba(30, 144, 255, 0.15);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid #e6f3ff;
+  position: relative;
+  margin: 20px;
+}
+
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #1e90ff, #ffd700);
+}
+
+.profile-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 16px 48px rgba(0, 0, 0, 0.15),
+    0 8px 24px rgba(30, 144, 255, 0.2);
+  border-color: #1e90ff;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #1e90ff 0%, #4169e1 100%);
+  padding: 30px 20px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.card-header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #4169e1;
+}
+
+.profile-photo-container {
+  display: inline-block;
+  padding: 4px;
+  background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+  border-radius: 50%;
+  box-shadow: 
+    0 6px 20px rgba(255, 215, 0, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 25px 20px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.profile-name {
+  margin: 0 0 12px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e90ff, #4169e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(30, 144, 255, 0.1);
+}
+
+.profile-designation {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff6b35;
+  text-shadow: 0 1px 2px rgba(255, 107, 53, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.profile-organisation {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+  line-height: 1.4;
+}
+
+.card-footer {
+  padding: 0 20px 20px;
+  background: #ffffff;
+}
+
+.decorative-line {
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #ffd700 20%, #1e90ff 50%, #ffd700 80%, transparent 100%);
+  border-radius: 2px;
+  position: relative;
+}
+
+.decorative-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #ffd700;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px #1e90ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-card {
+    width: 300px;
+    margin: 15px auto;
+    min-height: 420px;
+  }
+  
+  .card-header {
+    padding: 25px 15px 15px;
+  }
+  
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .profile-name {
+    font-size: 1.2rem;
+  }
+  
+  .profile-designation {
+    font-size: 0.95rem;
+  }
+  
+  .profile-organisation {
+    font-size: 0.85rem;
+  }
+  
+  .card-body {
+    padding: 20px 15px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    width: 280px;
+    margin: 10px auto;
+    min-height: 400px;
+  }
+  
+  .card-header {
+    padding: 20px 10px 10px;
+  }
+  
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .profile-name {
+    font-size: 1.1rem;
+  }
+  
+  .profile-designation {
+    font-size: 0.9rem;
+  }
+  
+  .profile-organisation {
+    font-size: 0.8rem;
+  }
+  
+  .card-body {
+    padding: 15px 10px 10px;
+  }
+  
+  .card-footer {
+    padding: 0 10px 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile-card {
+    width: 260px;
+    margin: 8px auto;
+    min-height: 380px;
+  }
+  
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile-name {
+    font-size: 1rem;
+  }
+  
+  .profile-designation {
+    font-size: 0.85rem;
+  }
+  
+  .profile-organisation {
+    font-size: 0.75rem;
+  }
+}
+
+/* Animation for card appearance */
+.profile-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects for interactive elements */
+.profile-photo-container:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.profile-name:hover {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+/* Touch Device Enhancements */
+@media (hover: none) and (pointer: coarse) {
+  .profile-card:hover {
+    transform: none;
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      0 4px 16px rgba(30, 144, 255, 0.15);
+    border-color: #e6f3ff;
+  }
+  
+  .profile-photo-container:hover {
+    transform: none;
+  }
+  
+  .profile-name:hover {
+    background: linear-gradient(135deg, #1e90ff, #4169e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Ensure proper tap targets on mobile */
+@media (max-width: 768px) {
+  .profile-card {
+    cursor: default; /* Remove pointer cursor on touch devices */
+  }
+}
