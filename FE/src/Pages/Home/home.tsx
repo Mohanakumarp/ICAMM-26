@@ -1,4 +1,6 @@
 import './home.css';
+import Committee from './comittee';
+
 
 const Home = () => {
     return (
@@ -41,11 +43,14 @@ const Home = () => {
                         </div>
                         <div className="date-item">
                             <h3>Conference Dates</h3>
-                            <p>June 10-14, 2026</p>
-                        </div>
+                            <p>June 10-14, 2026</p>                        </div>
                     </div>
-                </div>
-            </section>
+                </div>            </section>
+
+            {/* Committee Section */}
+            <div className="committee-section-wrapper">
+                <Committee />
+            </div>
         </div>
     );
 };
