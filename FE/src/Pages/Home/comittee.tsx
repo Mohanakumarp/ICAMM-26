@@ -14,7 +14,7 @@ const Committee = () => {
               photo="/src/images/trustee.jpg"
               name="Shri L Gopalakrishnan"
               designation="Managing Trustee"
-              organisation="PSG & Sons' Charities"
+              organisation="PSG & Sons' Charities Trust"
             />
           </div>
             <div className="committee-section">
