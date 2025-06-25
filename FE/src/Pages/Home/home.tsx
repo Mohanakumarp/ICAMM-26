@@ -1,6 +1,7 @@
 import './home.css';
 import Committee from './comittee';
 import Speakers from './speakers';
+import Domain from './domain';
 
 
 const Home = () => {
@@ -48,6 +49,9 @@ const Home = () => {
                     </div>
                 </div>            </section>
 
+            {/* Domain Section */}
+            
+
             {/* Committee Section */}
             <div className="committee-section-wrapper">
                 <Committee />
@@ -56,6 +60,10 @@ const Home = () => {
             {/* Speakers Section */}
             <div className="speakers-section-wrapper">
                 <Speakers />
+            </div>
+
+            <div className="domain-section-wrapper">
+                <Domain />
             </div>
         </div>
     );
