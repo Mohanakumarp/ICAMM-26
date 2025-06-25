@@ -1,5 +1,6 @@
 import './home.css';
 import Committee from './comittee';
+import Speakers from './speakers';
 
 
 const Home = () => {
@@ -50,6 +51,11 @@ const Home = () => {
             {/* Committee Section */}
             <div className="committee-section-wrapper">
                 <Committee />
+            </div>
+
+            {/* Speakers Section */}
+            <div className="speakers-section-wrapper">
+                <Speakers />
             </div>
         </div>
     );
