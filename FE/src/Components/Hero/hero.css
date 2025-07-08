@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === BACKGROUND VIDEO === */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-background .gradient-overlay,
+.hero-background .pattern-overlay,
+.hero-background .circuit-overlay,
+.hero-background .dots-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.05); /* subtle white overlay for contrast */
+}
+
+/* === HERO SECTION === */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: #fdfdfd;
+}
+
+/* === TITLES === */
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #00b4db, #0083b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0.3rem 0;
+}
+
+.highlight {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.hero-date,
+.hero-org,
+.hero-inst,
+.hero-loc {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  color: #f0f0f0;
+}
+
+/* === COUNTDOWN COMPONENT === */
+.countdown {
+  display: flex;
+  gap: 20px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.countdown-item {
+  text-align: center;
+}
+
+.countdown-value {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  color: #eee;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .countdown-value {
+    font-size: 1.5rem;
+  }
+}
