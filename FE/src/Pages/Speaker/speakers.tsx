@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfileCard from './profilecard';
+import ProfileCard from '../Comitte/profilecard';
 import './speakers.css';
 
 interface Speaker {

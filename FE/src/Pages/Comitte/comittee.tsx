@@ -11,7 +11,7 @@ const Committee = () => {
         <div className="committee-grid">          <div className="committee-section">
             <h4 className="position-title">CHIEF PATRON</h4>
             <ProfileCard 
-              photo="/src/images/trustee.jpg"
+              photo="/images/trustee.jpg"
               name="Shri L Gopalakrishnan"
               designation="Managing Trustee"
               organisation="PSG & Sons' Charities Trust"
@@ -20,7 +20,7 @@ const Committee = () => {
             <div className="committee-section">
             <h4 className="position-title">PATRON</h4>
             <ProfileCard 
-              photo="/src/images/principal.jpg"
+              photo="/images/principal.jpg"
               name="Dr K Prakasan"
               designation="Principal"
               organisation="PSG College of Technology"
@@ -28,7 +28,7 @@ const Committee = () => {
           </div>            <div className="committee-section">
             <h4 className="position-title">CONVENER</h4>
             <ProfileCard 
-              photo="/src/images/hod_maths.jpeg"
+              photo="/images/hod_maths.jpeg"
               name="Dr C Porkodi"
               designation="Professor and Head<br/>Department of Mathematics"
               organisation="PSG College of Technology"
@@ -37,7 +37,7 @@ const Committee = () => {
             <div className="committee-section">
             <h4 className="position-title">ORGANIZING SECRETARY</h4>
             <ProfileCard 
-              photo="/src/images/rsl.png"
+              photo="/images/rsl.png"
               name="Dr R Subalakshmi"
               designation="Assistant Professor (Sl. Gr.)<br /> Department of Mathematics"
               organisation="PSG College of Technology"

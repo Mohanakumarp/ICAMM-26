@@ -3,7 +3,9 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/home';
-import Committee from './Pages/Home/comittee';
+import Committee from './Pages/Comitte/comittee';
+import Domain from './Pages/Domin/domain';
+import Speaker from './Pages/Speaker/speakers';
 
 const rootElement = document.getElementById('root');
 
@@ -12,9 +14,12 @@ if (rootElement) {
     <StrictMode>
       <Router>
         {/* <Navigation /> - You need to import or create this component */}
-        {/* <ChatBubble/> */}        <Routes>
+        {/* <ChatBubble/> */}        
+        <Routes>
           <Route path="/" element={<Home />} />
-          {/* Add your routes here */}
+          <Route path="/committee" element={<Committee />} />
+          <Route path="/domain" element={<Domain />} />
+          <Route path="/speakers" element={<Speaker />} />
         </Routes>
       </Router>
     </StrictMode>
