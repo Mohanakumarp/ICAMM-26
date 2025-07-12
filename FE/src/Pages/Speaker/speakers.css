@@ -7,15 +7,87 @@
   margin-left: 60px;
   margin-right: 60px;
   padding: 40px 40px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  background: #ffffff;
   min-height: 100vh;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.speakers-container::before {
+  content: "∑ f(x) = ∫ g(x)dx";
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  color: rgba(30, 144, 255, 0.15);
+  font-size: 1.8rem;
+  font-family: 'Times New Roman', serif;
+  animation: floatMath1 10s ease-in-out infinite;
+  z-index: 1;
+}
+
+.speakers-container::after {
+  content: "∂²u/∂x² + ∂²u/∂y² = 0";
+  position: absolute;
+  bottom: 20%;
+  right: 8%;
+  color: rgba(255, 215, 0, 0.2);
+  font-size: 1.5rem;
+  font-family: 'Times New Roman', serif;
+  animation: floatMath2 12s ease-in-out infinite reverse;
+  z-index: 1;
+}
+
+@keyframes floatMath1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.15; }
+  50% { transform: translateY(-25px) rotate(1deg); opacity: 0.25; }
+}
+
+@keyframes floatMath2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.2; }
+  50% { transform: translateY(-18px) rotate(-1deg); opacity: 0.3; }
 }
 
 .speakers-header {
   text-align: center;
   margin-bottom: 50px;
   padding: 20px 20px 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.speakers-header::before {
+  content: "lim_{x→∞} f(x)";
+  position: absolute;
+  top: 10px;
+  right: 20%;
+  color: rgba(30, 144, 255, 0.12);
+  font-size: 1.3rem;
+  font-family: 'Times New Roman', serif;
+  animation: floatMath3 9s ease-in-out infinite;
+  z-index: 1;
+}
+
+.speakers-header::after {
+  content: "∇×F = ∂F_z/∂y - ∂F_y/∂z";
+  position: absolute;
+  bottom: 10px;
+  left: 15%;
+  color: rgba(255, 215, 0, 0.15);
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', serif;
+  animation: floatMath4 11s ease-in-out infinite reverse;
+  z-index: 1;
+}
+
+@keyframes floatMath3 {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.12; }
+  50% { transform: translateY(-15px) translateX(10px) rotate(2deg); opacity: 0.2; }
+}
+
+@keyframes floatMath4 {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.15; }
+  50% { transform: translateY(-20px) translateX(-8px) rotate(-1deg); opacity: 0.25; }
 }
 
 .speakers-title {
@@ -62,6 +134,26 @@
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.speakers-grid::before {
+  content: "∮ F·dr = ∬ (∇×F)·dS";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  color: rgba(30, 144, 255, 0.12);
+  font-size: 1.6rem;
+  font-family: 'Times New Roman', serif;
+  animation: floatMath5 14s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes floatMath5 {
+  0%, 100% { transform: translateY(-50%) translateX(0px) rotate(0deg); opacity: 0.12; }
+  50% { transform: translateY(-70%) translateX(15px) rotate(3deg); opacity: 0.2; }
 }
 
 .speaker-card-wrapper {
@@ -284,11 +376,11 @@
 /* Ensure proper contrast and accessibility */
 @media (prefers-color-scheme: dark) {
   .speakers-container {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    background: #ffffff;
   }
   
   .speakers-subtitle {
-    color: #ccc;
+    color: #666;
   }
 }
 

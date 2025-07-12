@@ -81,7 +81,7 @@ body, html {
   padding: 0;
   overflow-x: hidden;
   box-sizing: border-box;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  background: #ffffff;
 }
 
 /* Mobile Responsive Enhancements */

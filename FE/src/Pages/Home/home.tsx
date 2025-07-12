@@ -3,6 +3,7 @@ import './home.css';
 import Committee from '../Comitte/comittee';
 import Domain from '../Domin/domain';
 import Speaker from '../Speaker/speakers';
+import Dates from '../dates/dates';
 import Hero from '../../Components/Hero/hero';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Committee />
             <Speaker />
             <Domain/>
+            <Dates />
         </div>
     );
 };
