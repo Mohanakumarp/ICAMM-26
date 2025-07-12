@@ -7,6 +7,7 @@ import Committee from './Pages/Comitte/comittee';
 import Domain from './Pages/Domin/domain';
 import Speaker from './Pages/Speaker/speakers';
 import Dates from './Pages/dates/dates';
+import Navigation from './Components/NavBar/NavBar'; // Ensure this component is created or imported correctly
 
 const rootElement = document.getElementById('root');
 
@@ -14,6 +15,7 @@ if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
       <Router>
+        <Navigation /> {/* Ensure this component is created or imported correctly */}
         {/* <Navigation /> - You need to import or create this component */}
         {/* <ChatBubble/> */}        
         <Routes>
