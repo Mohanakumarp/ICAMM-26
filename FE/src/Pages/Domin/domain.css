@@ -1,13 +1,47 @@
 /* Domain Component Styles - Modern Design with Animations */
 
 .domain-container {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #2482e1 0%, #0680fb 50%, #2c3e50 100%);
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   min-height: 100vh;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.domain-container::before {
+  content: "∂f/∂x + ∂f/∂y = ∇f";
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 1.5rem;
+  font-family: 'Times New Roman', serif;
+  animation: float1 8s ease-in-out infinite;
+}
+
+.domain-container::after {
+  content: "∫∫∫ f(x,y,z) dxdydz";
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', serif;
+  animation: float2 10s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
+  50% { transform: translateY(-20px) rotate(2deg); opacity: 0.15; }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
+  50% { transform: translateY(-15px) rotate(-1deg); opacity: 0.12; }
 }
 
 .domain-header {
@@ -20,7 +54,10 @@
   font-size: 3.5rem;
   font-weight: 800;
   margin: 0 0 20px 0;
-  color: #d9d8e3;
+  background: linear-gradient(135deg, #ffffff, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   position: relative;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -33,7 +70,7 @@
   transform: translateX(-50%);
   width: 100px;
   height: 5px;
-  background: linear-gradient(90deg, #ffd700, #1e90ff, #8a2be2, #ffd700);
+  background: linear-gradient(90deg, #ffffff, #fbbf24, #f59e0b, #ffffff);
   border-radius: 3px;
   animation: shimmer 2s ease-in-out infinite;
 }
@@ -45,12 +82,13 @@
 
 .domain-subtitle {
   font-size: 1.3rem;
-  color: #f8f9fa;
+  color: #ffffff;
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.6;
   max-width: 700px;
   margin: 0 auto;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .domain-grid {
@@ -61,6 +99,9 @@
   align-items: center;
   padding: 0;
   perspective: 1000px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .domain-card {
@@ -108,26 +149,27 @@
 }
 
 .domain-card-back {
-  background: linear-gradient(135deg, #1e90ff 0%, #4169e1 50%, #8a2be2 100%);
-  color: white;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  color: #ffffff;
   transform: rotateY(180deg);
 }
 
 .domain-icon-container {
   width: 120px;
   height: 120px;
-  background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #fbbf24 100%);
   border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 25px;
   box-shadow: 
-    0 8px 20px rgba(0, 0, 0, 0.1),
-    inset 0 2px 4px rgba(255, 255, 255, 0.8);
+    0 8px 20px rgba(251, 191, 36, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.6);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  border: 2px solid #f59e0b;
 }
 
 .domain-icon-container::before {
@@ -137,7 +179,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(30, 144, 255, 0.1), transparent);
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transform: rotate(45deg);
   transition: all 0.5s ease;
   opacity: 0;
@@ -155,20 +197,22 @@
 
 .domain-icon {
   font-size: 3.5rem;
-  filter: grayscale(0.2);
+  color: #1e3a8a;
+  filter: none;
   transition: all 0.3s ease;
 }
 
 .domain-icon-small {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  opacity: 0.9;
+  opacity: 1;
+  color: #f5f5f5;
 }
 
 .domain-card-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: #1e3a8a;
   margin: 0;
   line-height: 1.4;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -177,33 +221,39 @@
 .domain-card-title-back {
   font-size: 1.2rem;
   font-weight: 700;
-  color: white;
+  color: #f5f5f5;
   margin: 0 0 15px 0;
   line-height: 1.3;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .domain-description {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(245, 245, 245, 0.9);
   margin: 0 0 20px 0;
   line-height: 1.5;
   flex-grow: 1;
   display: flex;
   align-items: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .domain-learn-more {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.9);
   padding: 10px 20px;
   border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(251, 191, 36, 0.7);
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  color: #1e3a8a;
+  font-weight: 600;
 }
 
 .domain-learn-more:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(251, 191, 36, 1);
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
 }
 
 .domain-learn-more span {
@@ -236,13 +286,15 @@
 @media (max-width: 1200px) {
   .domain-container {
     padding: 50px 15px;
-    margin: 0 auto;
-    max-width: 100%;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
   }
   
   .domain-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 35px;
+    max-width: 1000px;
   }
   
   .domain-title {
@@ -258,14 +310,16 @@
 @media (max-width: 768px) {
   .domain-container {
     padding: 40px 10px;
-    margin: 0 auto;
-    max-width: 100%;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
     min-height: auto;
   }
   
   .domain-grid {
     gap: 30px;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
   }
   
   .domain-header {
@@ -299,9 +353,9 @@
 @media (max-width: 600px) {
   .domain-container {
     padding: 30px 10px;
+    width: 100vw;
+    max-width: none;
     margin: 0;
-    max-width: 100%;
-    width: 100%;
     min-height: auto;
   }
   
@@ -309,6 +363,7 @@
     grid-template-columns: 1fr;
     gap: 25px;
     padding: 0;
+    max-width: 400px;
   }
   
   .domain-header {
@@ -360,13 +415,14 @@
 @media (max-width: 480px) {
   .domain-container {
     padding: 25px 5px;
+    width: 100vw;
+    max-width: none;
     margin: 0;
-    max-width: 100%;
-    width: 100%;
   }
   
   .domain-grid {
     gap: 20px;
+    max-width: 350px;
   }
   
   .domain-title {
@@ -398,9 +454,9 @@
 @media (max-width: 320px) {
   .domain-container {
     padding: 20px 5px;
+    width: 100vw;
+    max-width: none;
     margin: 0;
-    max-width: 100%;
-    width: 100%;
   }
   
   .domain-header {
@@ -418,6 +474,7 @@
   
   .domain-grid {
     gap: 15px;
+    max-width: 300px;
   }
   
   .domain-card {
@@ -466,19 +523,21 @@
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   .domain-container {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 50%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
   }
   
   .domain-subtitle {
-    color: #e9ecef;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
   
   .domain-card-front {
-    background: linear-gradient(135deg, #3c3c3c 0%, #2c2c2c 100%);
-    border-color: #555;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-color: #fbbf24;
   }
   
   .domain-card-title {
-    color: #e9ecef;
+    color: #1e3a8a;
+    text-shadow: 0 1px 2px rgba(30, 58, 138, 0.2);
   }
 }
