@@ -8,11 +8,12 @@ import Details from '../details/details';
 import Registration from '../registration/registration';
 import Payment from '../payment/payment';
 import Hero from '../../Components/Hero/hero';
-
+import About from '../About/about';
 const Home = () => {
     return (
         <div className="home-container">
             <Hero />
+            <About />
             <Committee />
             <Speaker />
             <Domain/>
@@ -20,6 +21,7 @@ const Home = () => {
             <Details />
             <Registration />
             <Payment />
+
         </div>
     );
 };

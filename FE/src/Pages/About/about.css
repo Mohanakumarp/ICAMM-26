@@ -1,0 +1,194 @@
+/* About Section Styles */
+.about-section {
+  padding: 4rem 2rem;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #1e90ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #1e90ff, #00bfff);
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.about-card-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-text-content {
+  flex: 1;
+}
+
+.about-image-container {
+  flex: 0 0 300px;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+.about-heading {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #1e90ff;
+}
+
+.about-subheading {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: gray;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: black;
+  padding: 0 10px;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Card color variations */
+.college,
+.department,
+.conference {
+  background: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image-container {
+    order: -1; /* Show image ABOVE text */
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-image {
+    width: 100%; /* Keep full width */
+    max-width: 300px; /* Preserve desktop size */
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .about-text-content {
+    width: 100%;
+  }
+
+  .about-heading {
+    font-size: 1.5rem;
+  }
+
+  .about-subheading {
+    font-size: 1.3rem;
+  }
+
+  .about-content {
+    font-size: 1rem;
+    padding: 0 5px;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-card {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .about-heading {
+    font-size: 1.3rem;
+  }
+
+  .about-subheading {
+    font-size: 1.1rem;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+}
