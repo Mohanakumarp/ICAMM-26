@@ -33,7 +33,6 @@ const Countdown = () => {
 
   return (
     <div className="countdown-wrapper">
-      <h2 className="countdown-heading">Countdown to the Conference</h2>
       <div className="countdown">
         {['days', 'hours', 'minutes', 'seconds'].map((unit) => (
           <div key={unit} className="countdown-item">

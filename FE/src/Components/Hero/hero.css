@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-/* === BACKGROUND VIDEO === */
+/* === VIDEO BACKGROUND === */
 .video-background {
   position: absolute;
   top: 0;
@@ -15,7 +15,8 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1;
+  z-index: -2;
+  filter: brightness(0.4); /* Darken the video */
 }
 
 .hero-background {
@@ -24,6 +25,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 .hero-background .gradient-overlay,
@@ -35,8 +37,44 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
-  background: rgba(255, 255, 255, 0.05); /* subtle white overlay for contrast */
+  opacity: 10%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* === MATH SYMBOLS === */
+.math-symbols {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.math-symbol {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  font-family: 'Times New Roman', serif;
+  text-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+  animation: floatResponsive 12s ease-in-out forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes floatResponsive {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-500%) scale(1.2) rotate(360deg);
+    opacity: 0;
+  }
 }
 
 /* === HERO SECTION === */
@@ -54,74 +92,90 @@
   color: #fdfdfd;
 }
 
-/* === TITLES === */
-.hero-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+.hero-title-container {
+  max-width: 900px;
+  padding: 1.5rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-.text-gradient {
-  background: linear-gradient(to right, #00b4db, #0083b0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* === HERO TITLES === */
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e90ff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
 }
 
 .hero-subtitle {
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
   margin: 0.3rem 0;
+  letter-spacing: 0.5px;
 }
 
-.highlight {
+.hero-subtitle.highlight {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e90ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+}
+
+/* === DETAILS TEXT === */
+.hero-date {
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-style: italic;
+  margin-top: 0.8rem;
+}
+
+.hero-org {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1e90ff;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.hero-inst {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0.4rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #ffffff;
 }
 
-.hero-date,
-.hero-org,
-.hero-inst,
 .hero-loc {
   font-size: 1rem;
-  margin-top: 0.3rem;
-  color: #f0f0f0;
-}
-
-/* === COUNTDOWN COMPONENT === */
-.countdown {
-  display: flex;
-  gap: 20px;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.countdown-item {
-  text-align: center;
-}
-
-.countdown-value {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.countdown-label {
-  font-size: 0.9rem;
-  color: #eee;
+  color: #d6eaff;
+  margin-top: 0.2rem;
+  font-weight: 400;
 }
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
-  .countdown-value {
-    font-size: 1.5rem;
+  .hero-subtitle.highlight {
+    font-size: 1.3rem;
+  }
+
+  .hero-inst {
+    font-size: 1.2rem;
+  }
+
+  .math-symbol {
+    font-size: 1rem !important;
   }
 }
