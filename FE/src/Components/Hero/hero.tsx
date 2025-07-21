@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Hero.css';
+import './hero.css';
 import video from '../../Assets/video.mp4';
 import Countdown from './Countdown';
 
