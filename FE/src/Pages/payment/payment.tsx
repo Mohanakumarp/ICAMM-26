@@ -4,12 +4,6 @@ import './payment.css';
 const Payment: React.FC = () => {
   return (
     <div className="payment-container">
-      <div className="payment-bg-decoration">
-        <div className="floating-shape shape-1"></div>
-        <div className="floating-shape shape-2"></div>
-        <div className="floating-shape shape-3"></div>
-      </div>
-      
       <div className="payment-content">
         <div className="payment-header">
           <h1 className="payment-title">

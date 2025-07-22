@@ -27,12 +27,6 @@ const Registration: React.FC = () => {
 
   return (
     <div className="registration-container">
-      <div className="registration-bg-decoration">
-        <div className="floating-shape shape-1"></div>
-        <div className="floating-shape shape-2"></div>
-        <div className="floating-shape shape-3"></div>
-      </div>
-      
       <div className="registration-content">
         <div className="registration-header">
           <h1 className="registration-title">
@@ -77,19 +71,15 @@ const Registration: React.FC = () => {
             <h3>Registration Fee Includes</h3>
             <div className="includes-grid">
               <div className="include-item">
-                <span className="include-icon">📚</span>
                 <span>Conference Kit</span>
               </div>
               <div className="include-item">
-                <span className="include-icon">🍽️</span>
                 <span>Lunch & Refreshments</span>
               </div>
               <div className="include-item">
-                <span className="include-icon">📜</span>
-                <span>Certificate of Participation</span>
+                <span>Event Certificates</span>
               </div>
               <div className="include-item">
-                <span className="include-icon">🎪</span>
                 <span>Conference Events</span>
               </div>
             </div>
