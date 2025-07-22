@@ -5,11 +5,11 @@ const Details: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('guidelines');
 
   const sections = [
-    { id: 'guidelines', title: 'Guidelines', icon: '📋' },
-    { id: 'publication', title: 'Publication', icon: '📚' },
-    { id: 'plagiarism', title: 'Plagiarism', icon: '🔍' },
-    { id: 'accommodation', title: 'Accommodation', icon: '🏨' },
-    { id: 'visa', title: 'Visa', icon: '🛂' }
+    { id: 'guidelines', title: 'Guidelines' },
+    { id: 'publication', title: 'Publication' },
+    { id: 'plagiarism', title: 'Plagiarism'  },
+    { id: 'accommodation', title: 'Accommodation' },
+    { id: 'visa', title: 'Visa' }
   ];
 
   const journals = [
@@ -26,7 +26,6 @@ const Details: React.FC = () => {
           <div className="content-section">
             <div className="section-header">
               <h2 className="section-title">
-                <span className="section-icon">📋</span>
                 Guidelines
               </h2>
               <p className="section-subtitle">Important guidelines for paper submission and conference participation</p>
@@ -71,7 +70,6 @@ const Details: React.FC = () => {
           <div className="content-section">
             <div className="section-header">
               <h2 className="section-title">
-                <span className="section-icon">📚</span>
                 Publication in International/National Journals
               </h2>
               <p className="section-subtitle">Information about journal publication opportunities</p>
@@ -122,7 +120,6 @@ const Details: React.FC = () => {
           <div className="content-section">
             <div className="section-header">
               <h2 className="section-title">
-                <span className="section-icon">🔍</span>
                 Plagiarism Policy
               </h2>
               <p className="section-subtitle">Strict guidelines to ensure originality and academic integrity</p>
@@ -140,7 +137,6 @@ const Details: React.FC = () => {
               
               <div className="policy-points">
                 <div className="policy-item">
-                  <div className="policy-icon">✅</div>
                   <div className="policy-content">
                     <h4>Author Responsibility</h4>
                     <p>Authors are responsible for checking the plagiarism (below 25%) of their papers before submission. Authors who republish their previously published work (self-plagiarism) will be subject to the same procedures.</p>
@@ -148,7 +144,6 @@ const Details: React.FC = () => {
                 </div>
                 
                 <div className="policy-item">
-                  <div className="policy-icon">🔬</div>
                   <div className="policy-content">
                     <h4>Detection Process</h4>
                     <p>All research papers submitted for publication undergo plagiarism detection using specialized software to verify their originality and determine the similarity percentage.</p>
@@ -156,7 +151,6 @@ const Details: React.FC = () => {
                 </div>
                 
                 <div className="policy-item">
-                  <div className="policy-icon">📝</div>
                   <div className="policy-content">
                     <h4>Non-Compliance</h4>
                     <p>Papers that do not meet the required criteria will be returned to the author for revision.</p>
@@ -172,7 +166,6 @@ const Details: React.FC = () => {
           <div className="content-section">
             <div className="section-header">
               <h2 className="section-title">
-                <span className="section-icon">🏨</span>
                 Accommodation
               </h2>
               <p className="section-subtitle">Stay arrangements for conference delegates</p>
@@ -224,7 +217,6 @@ const Details: React.FC = () => {
           <div className="content-section">
             <div className="section-header">
               <h2 className="section-title">
-                <span className="section-icon">🛂</span>
                 Visa Information
               </h2>
               <p className="section-subtitle">Essential visa requirements for international delegates</p>
@@ -286,22 +278,12 @@ const Details: React.FC = () => {
 
   return (
     <div className="details-container">
-      {/* Background decorative elements */}
-      <div className="details-bg-decoration">
-        <div className="floating-shape shape-1"></div>
-        <div className="floating-shape shape-2"></div>
-        <div className="floating-shape shape-3"></div>
-      </div>
-
       <div className="details-content">
         <div className="details-header">
           <h1 className="details-title">
             <span className="title-icon">📋</span>
             Conference Details
           </h1>
-          <p className="details-subtitle">
-            Everything you need to know about ICAMM-26
-          </p>
         </div>
 
         <div className="details-layout">
@@ -317,7 +299,6 @@ const Details: React.FC = () => {
                   className={`nav-item ${activeSection === section.id ? 'active' : ''}`}
                   onClick={() => setActiveSection(section.id)}
                 >
-                  <span className="nav-icon">{section.icon}</span>
                   <span className="nav-text">{section.title}</span>
                 </button>
               ))}

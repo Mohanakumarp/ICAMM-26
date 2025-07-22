@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
         <h1 className="hero-title">Seventh International Conference On</h1>
         <h2 className="hero-subtitle highlight">Applied Mathematical Models</h2>
         <h2 className="hero-subtitle">ICAMM 2026</h2>
-        <p className="hero-date">January 8–10, 2026</p>
+        <p className="hero-date">June 10–12, 2026</p>
         <p className="hero-org">Organized by</p>
         <p className="hero-inst">Department of Mathematics<br />PSG College of Technology</p>
         <p className="hero-loc">Coimbatore – 641004, Tamil Nadu, India</p>
