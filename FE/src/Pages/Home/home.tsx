@@ -9,6 +9,7 @@ import Registration from '../registration/registration';
 import Payment from '../payment/payment';
 import Hero from '../../Components/Hero/hero';
 import About from '../About/about';
+import PreviousEditions from '../PreviousEditions/PreviousEditions';
 const Home = () => {
     return (
         <div className="home-container">
@@ -21,6 +22,7 @@ const Home = () => {
             <Details />
             <Registration />
             <Payment />
+            <PreviousEditions />
 
         </div>
     );
