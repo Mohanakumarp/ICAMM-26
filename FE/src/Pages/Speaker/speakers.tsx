@@ -1,6 +1,15 @@
+
 import React from 'react';
 import ProfileCard from '../Comitte/profilecard';
 import './speakers.css';
+import rajesh from '../../images/rajesh.jpg';
+import bhargav from '../../images/bhargav.jpg';
+import bhakthi from '../../images/bhakthi.jpg';
+import sushmitha from '../../images/sushmitha.jpg';
+import kavikumar from '../../images/kavikumar.jpg';
+import arnfried from '../../images/arnfried.png';
+import asadi from '../../images/asadi.png';
+import sujatha from '../../images/sujatha.png';
 
 interface Speaker {
   id: number;
@@ -13,87 +22,59 @@ interface Speaker {
 const speakers: Speaker[] = [
   {
     id: 1,
-    photo: 'https://via.placeholder.com/200x200/1e90ff/ffffff?text=Speaker+1',
-    name: 'XYZ Speaker 1',
-    designation: 'XYZ Designation',
-    organisation: 'XYZ Organisation'
+    photo: rajesh,
+    name: 'Prof. Rajesh Kumar',
+    designation: 'Dept. of Electrical Engg',
+    organisation: 'MNIT Jaipur and Dept. of Health Science, Univ. of Johannesburg, South Africa'
   },
   {
     id: 2,
-    photo: 'https://via.placeholder.com/200x200/1e90ff/ffffff?text=Speaker+2',
-    name: 'XYZ Speaker 2',
-    designation: 'XYZ Designation',
-    organisation: 'XYZ Organisation'
+    photo: bhargav,
+    name: 'Prof K. Bhargav Kumar ',
+    designation: 'Department of Mathematics',
+    organisation: 'Birla Institute of Technology & Science, Pilani Hyderabad Campus'
   },
   {
     id: 3,
-    photo: 'https://via.placeholder.com/200x200/1e90ff/ffffff?text=Speaker+3',
-    name: 'XYZ Speaker 3',
-    designation: 'XYZ Designation',
-    organisation: 'XYZ Organisation'
+    photo: bhakthi,
+    name: 'Prof Bhakti Bhusan Manna',
+    designation: 'Department of Mathematics',
+    organisation: 'Indian Institute of Technology Hyderabad'
   },
   {
     id: 4,
-    photo: 'https://via.placeholder.com/200x200/1e90ff/ffffff?text=Speaker+4',
-    name: 'XYZ Speaker 4',
-    designation: 'XYZ Designation',
-    organisation: 'XYZ Organisation'
+    photo: sushmitha,
+    name: 'Dr. Sushmitha. P',
+    designation: 'Department of Mathematics',
+    organisation: 'Indian Institute of Technology Patna'
   },
   {
     id: 5,
-    photo: 'https://via.placeholder.com/200x200/1e90ff/ffffff?text=Speaker+5',
-    name: 'XYZ Speaker 5',
-    designation: 'XYZ Designation',
-    organisation: 'XYZ Organisation'
+    photo: kavikumar,
+    name: 'Dr Kavikumar Jacob',
+    designation: 'Department of Mathematics and Statistics',
+    organisation: 'Universiti Tun Hussein Onn Malaysia, Malaysia'
   },
   {
     id: 6,
-    photo: 'https://via.placeholder.com/200x200/1e90ff/ffffff?text=Speaker+6',
-    name: 'XYZ Speaker 6',
-    designation: 'XYZ Designation',
-    organisation: 'XYZ Organisation'
+    photo: arnfried,
+    name: 'Prof. Arnfried Kemnitz',
+    designation: 'Department of Mathematics',
+    organisation: 'Technische Universität Braunschweig, Germany'
   },
   {
     id: 7,
-    photo: 'https://via.placeholder.com/200x200/1e90ff/ffffff?text=Speaker+7',
-    name: 'XYZ Speaker 7',
-    designation: 'XYZ Designation',
-    organisation: 'XYZ Organisation'
+    photo: asadi,
+    name: 'Dr Asadi Srinivasulu',
+    designation: 'IT Professor',
+    organisation: 'University of Newcastle , Australia'
   },
   {
     id: 8,
-    photo: 'https://via.placeholder.com/200x200/1e90ff/ffffff?text=Speaker+8',
-    name: 'XYZ Speaker 8',
-    designation: 'XYZ Designation',
-    organisation: 'XYZ Organisation'
-  },
-  {
-    id: 9,
-    photo: 'https://via.placeholder.com/200x200/1e90ff/ffffff?text=Speaker+9',
-    name: 'XYZ Speaker 9',
-    designation: 'XYZ Designation',
-    organisation: 'XYZ Organisation'
-  },
-  {
-    id: 10,
-    photo: 'https://via.placeholder.com/200x200/1e90ff/ffffff?text=Speaker+10',
-    name: 'XYZ Speaker 10',
-    designation: 'XYZ Designation',
-    organisation: 'XYZ Organisation'
-  },
-  {
-    id: 11,
-    photo: 'https://via.placeholder.com/200x200/1e90ff/ffffff?text=Speaker+11',
-    name: 'XYZ Speaker 11',
-    designation: 'XYZ Designation',
-    organisation: 'XYZ Organisation'
-  },
-  {
-    id: 12,
-    photo: 'https://via.placeholder.com/200x200/1e90ff/ffffff?text=Speaker+12',
-    name: 'XYZ Speaker 12',
-    designation: 'XYZ Designation',
-    organisation: 'XYZ Organisation'
+    photo: sujatha,
+    name: 'Dr Sujatha Ramdorai',
+    designation: 'Mathematics Department',
+    organisation: 'University of British Columbia, Canada'
   }
 ];
 
