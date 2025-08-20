@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './NavBar.css';
 import Logo from '../../Assets/logo.png';
-
+import PSGlogo from '../../Assets/PSGlogo.png';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,12 +17,31 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="logo-container">
+          <img 
+            src={PSGlogo} 
+            alt="PSG College of Technology Logo" 
+            className="psg-logo-image" 
+            onClick={() => navigate('/')} 
+            style={{ cursor: "pointer" }}
+          />
           <div className="logo" onClick={() => navigate('/')} style={{ cursor: "pointer" }}>
-            <img src={Logo} alt="Logo" className="logo-image" />
+            <img src={Logo} alt="ICAMM 2026 Logo" className="logo-image" />
             <div className="sep-line"></div>
             <div className="logo-text">
               <span className="conference-name">ICAMM'26</span>
@@ -64,8 +83,6 @@ const Navigation = () => {
           <a href="/committee" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Committee</a>
           <a href="/speakers" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Speakers</a>
           <a href="/domain" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Domains</a>
-          <a href="/registration" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Registration</a>
-          <a href="/contact" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</a>
         </div>
       </div>
       

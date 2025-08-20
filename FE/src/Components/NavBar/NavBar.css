@@ -1,3 +1,11 @@
+:root {
+  --nav-h: 72px;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
 /* NAVIGATION BAR */
 .navigation {
   position: fixed;
@@ -5,10 +13,13 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: transparent; /* semi-transparent for contrast */
+  background: transparent;
   color: #fff;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px); /* smoothness */
+  backdrop-filter: blur(10px);
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
 }
 
 .navigation.scrolled {
@@ -19,12 +30,14 @@
 
 /* CONTAINER */
 .nav-container {
+  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0.5rem 2rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 /* LOGO SECTION */
@@ -36,18 +49,28 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .logo-image {
-  height: 150px;
+  height: 48px;
   width: auto;
+  max-width: 100%;
   object-fit: contain;
-  filter: brightness(1.2); /* enhance for dark bg */
+  filter: brightness(1.2);
 }
 
-.navigation.scrolled .logo-image {
-  filter: brightness(1); /* normal for light bg */
+.psg-logo-image {
+  height: 48px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.navigation.scrolled .logo-image,
+.navigation.scrolled .psg-logo-image {
+  filter: brightness(1);
 }
 
 .sep-line {
@@ -130,29 +153,25 @@
 /* SIDEBAR MENU */
 .sidebar-menu {
   position: fixed;
-  top: 0;
-  right: -300px;
-  width: 300px;
-  height: 100vh;
-  background: rgba(15, 23, 42, 0.95);
-  transition: right 0.3s ease;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  inset: 0;
+  background:white;
+  transition: transform 0.3s ease;
   z-index: 1001;
-  padding-top: 80px;
+  padding-top: var(--nav-h);
+  transform: translateX(100%);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .sidebar-menu.open {
-  right: 0;
+  transform: translateX(0);
 }
 
 /* Overlay for mobile menu */
 .mobile-menu-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 1000;
   cursor: pointer;
 }
@@ -162,10 +181,11 @@
   flex-direction: column;
   padding: 2rem;
   gap: 1.5rem;
+  background-color: #fff;
 }
 
 .sidebar-menu .nav-link {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 1.2rem;
   padding: 0.5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -174,11 +194,11 @@
 }
 
 .sidebar-menu .nav-link:hover {
-  color: #4da8ff;
+  color: #0084ff;
 }
 
-/* RESPONSIVE - TABLET */
-@media (max-width: 1024px) {
+/* RESPONSIVE */
+@media (max-width: 640px) {
   .desktop-menu {
     display: none;
   }
@@ -188,20 +208,23 @@
   }
 
   .nav-container {
-    padding: 0.5rem 1rem;
+    padding: 0 0.75rem;
   }
 
   .logo-text {
     font-size: 0.9rem;
   }
 
-  .psg-logo {
-    height: 50px;
+  .psg-logo-image,
+  .logo-image {
+    height: 40px;
   }
-}
-
-/* RESPONSIVE - MOBILE */
-@media (max-width: 480px) {
+  
+  .sep-line {
+    height: 30px;
+    margin: 0 0.5rem;
+  }
+  
   .conference-name {
     font-size: 1.2rem;
   }
@@ -209,12 +232,10 @@
   .institution-name {
     font-size: 0.8rem;
   }
+}
 
-  .logo {
-    gap: 0.5rem;
-  }
-
-  .sep-line {
-    margin: 0 0.5rem;
+@media (min-width: 641px) {
+  .mobile-menu-toggle {
+    display: none;
   }
 }

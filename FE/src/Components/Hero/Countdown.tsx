@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import './Countdown.css'; // Import the CSS
+import { useState, useEffect } from 'react';
+import './Countdown.css';
 
-const Countdown = () => {
+interface CountdownProps {
+  className?: string;
+}
+
+const Countdown: React.FC<CountdownProps> = ({ className = '' }) => {
   const calculateTimeLeft = () => {
     const targetDate = new Date('2026-06-10T00:00:00');
     const now = new Date();
     const difference = targetDate.getTime() - now.getTime();
 
-    let timeLeft = {};
+    let timeLeft: Record<string, number> = {};
 
     if (difference > 0) {
       timeLeft = {
@@ -32,7 +36,7 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="countdown-wrapper">
+    <div className={`countdown-wrapper ${className}`}>
       <div className="countdown">
         {['days', 'hours', 'minutes', 'seconds'].map((unit) => (
           <div key={unit} className="countdown-item">
