@@ -78,6 +78,34 @@ const About = () => {
           </div>
         </div>
 
+        {/* Vision and Mission Section */}
+        <div className="about-card vision-mission">
+          <div className="about-card-header">
+            <div className="about-text-content">
+              <h2 className="about-heading">Vision and Mission</h2>
+              <h3 className="about-subheading">Department of Mathematics</h3>
+              <div className="about-content">
+                <div className="vision-mission-container">
+                  <ul className="vision-mission-list">
+                    <p>
+                      Provide students with the best possible educational and research experience
+                      essential for developing global citizens.
+                      Apply Mathematical sciences to the pressing problems of the real world.
+                      Explore the two-way relationship between technology and society.
+                      </p>
+                      <p>
+                      To create competent professionals by inculcating highly skilled mathematical
+                      knowledge.
+                      To encourage acquisition of life-long learning skills by educating the leaders of
+                      tomorrow.
+                    </p>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Conference Section */}
         <div className="about-card conference">
           <div className="about-card-header">

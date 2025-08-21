@@ -112,8 +112,39 @@
 /* Card color variations */
 .college,
 .department,
-.conference {
+.conference,
+.vision-mission {
   background: #f0f0f0;
+}
+
+/* Vision and Mission Styles */
+.vision-mission-container {
+  margin-top: 1rem;
+}
+
+.vision-mission-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.vision-mission-list li {
+  position: relative;
+  padding: 0.75rem 0 0.75rem 2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.vision-mission-list li:last-child {
+  border-bottom: none;
+}
+
+.vision-mission-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0.5rem;
+  color: #1e90ff;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 /* Responsive Design */
