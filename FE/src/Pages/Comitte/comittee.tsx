@@ -7,7 +7,7 @@ import convenor from '../../images/rsl.png';
 
 const Committee = () => {
   return (
-    <div>
+    <div className="page-wrapper">
       <div className="committee-container">
         <div className="glass-container">
           <h3 className="committee-title">ORGANIZING COMMITTEE</h3>

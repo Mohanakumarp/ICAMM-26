@@ -49,11 +49,12 @@ const domains: Domain[] = [
 
 const Domain: React.FC = () => {
   return (
-    <div className="domain-container">
-      <div className="domain-header">
-        <h1 className="domain-title">Research Domains</h1>
-        <p className="domain-subtitle">Explore our key areas of mathematical and computational research</p>
-      </div>
+    <div className="page-wrapper">
+      <div className="domain-container">
+        <div className="domain-header">
+          <h1 className="domain-title">Research Domains</h1>
+          <p className="domain-subtitle">Explore our key areas of mathematical and computational research</p>
+        </div>
       
       <div className="domain-grid">
         {domains.map((domain) => (
@@ -77,6 +78,7 @@ const Domain: React.FC = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

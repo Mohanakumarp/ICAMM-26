@@ -80,11 +80,12 @@ const speakers: Speaker[] = [
 
 const Speakers: React.FC = () => {
   return (
-    <div className="speakers-container">
-      <div className="speakers-header">
-        <h1 className="speakers-title">KEYNOTE SPEAKERS</h1>
-        <p className="speakers-subtitle">Meet our distinguished keynote speakers who will share their expertise</p>
-      </div>
+    <div className="page-wrapper">
+      <div className="speakers-container">
+        <div className="speakers-header">
+          <h1 className="speakers-title">KEYNOTE SPEAKERS</h1>
+          <p className="speakers-subtitle">Meet our distinguished keynote speakers who will share their expertise</p>
+        </div>
       
       <div className="speakers-grid">
         {speakers.map((speaker) => (
@@ -98,6 +99,7 @@ const Speakers: React.FC = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

@@ -43,14 +43,15 @@ const Dates: React.FC = () => {
   ];
 
   return (
-    <div className="dates-container">
-      {/* Background decorative elements */}
-      <div className="dates-bg-decoration">
-        <div className="floating-shape shape-1"></div>
-        <div className="floating-shape shape-2"></div>
-        <div className="floating-shape shape-3"></div>
-        <div className="floating-shape shape-4"></div>
-      </div>
+    <div className="page-wrapper">
+      <div className="dates-container">
+        {/* Background decorative elements */}
+        <div className="dates-bg-decoration">
+          <div className="floating-shape shape-1"></div>
+          <div className="floating-shape shape-2"></div>
+          <div className="floating-shape shape-3"></div>
+          <div className="floating-shape shape-4"></div>
+        </div>
 
       <div className="dates-content">
         <div className="dates-header">
@@ -157,6 +158,7 @@ const Dates: React.FC = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };

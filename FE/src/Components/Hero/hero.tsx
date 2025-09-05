@@ -96,15 +96,15 @@ const Hero: React.FC = () => {
             <p className="hero-loc">Coimbatore – 641004, Tamil Nadu, India</p>
             
             <div className="hero-logos-mobile">
-              <img src={Logo75} alt="75 Years of PSG College of Technology" className="side-logo" />
-              <img src={Logo100} alt="100 Years of PSG Sons Charities" className="side-logo" />
+              <img src={Logo75} alt="75 Years of PSG College of Technology" className="logo-75-years" />
+              <img src={Logo100} alt="100 Years of PSG Sons Charities" className="logo-100-years" />
             </div>
           </div>
         </div>
       ) : (
         <div className="hero-inner">
           <div className="hero-left">
-            <img src={Logo75} alt="75 Years of PSG College of Technology" className="side-logo" />
+            <img src={Logo75} alt="75 Years of PSG College of Technology" className="logo-75-years" />
           </div>
           
           <div className="hero-center">
@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="hero-right">
-            <img src={Logo100} alt="100 Years of PSG Sons Charities" className="side-logo" />
+            <img src={Logo100} alt="100 Years of PSG Sons Charities" className="logo-100-years" />
           </div>
         </div>
       )}

@@ -103,30 +103,77 @@ html, body {
   justify-content: center;
   gap: 1.25rem;
   width: 100%;
+  margin-top: 2.5rem;
   max-width: 1200px;
   margin-bottom: 2rem;
   position: relative;
   z-index: 2;
 }
 
-.hero-left, .hero-right {
+/*.hero-left, .hero-right {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(23, 23, 23, 0.632);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 1.5rem;
+  border: 1px solid rgba(232, 228, 228, 0.2);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  min-width: 260px; 
+  min-height: 160px;
+  width: auto;
+  height: auto;
+}*/
 
 
-}
 
 .side-logo {
-  width: 200px;
+  width: 150px;
   max-width: 11000px;
   height: auto;
   object-fit: contain;
+  filter: brightness(2) contrast(2);
+  transition: all 0.3s ease;
 }
 
-.hero-center {
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+.side-logo:hover {
+  filter: brightness(1.2) contrast(1.2);
+  transform: scale(1.05);
 }
+
+/* Separate class names for individual logos with same styling */
+.logo-75-years {
+  width: 150px;
+  max-width: 11000px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(2.5) ;
+  transition: all 0.3s ease;
+}
+
+.logo-75-years:hover {
+  filter: brightness(1.2) contrast(1.2);
+  transform: scale(1.05);
+}
+
+.logo-100-years {
+  margin-left: -55px;
+  width: 250px;
+  max-width: 11000px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(2) contrast(2);
+  transition: all 0.3s ease;
+}
+
+.logo-100-years:hover {
+  filter: brightness(1.2) contrast(1.2);
+  transform: scale(1.05);
+}
+
+
 
 /* === HERO TITLES === */
 .hero-title {
@@ -243,6 +290,16 @@ html, body {
   
   .side-logo {
     max-width: 96px;
+      filter: brightness(2) contrast(2);
+
+  }
+  
+  /* Tablet styles for individual logo classes */
+  .logo-75-years,
+  .logo-100-years {
+    max-width: 96px;
+      filter: brightness(2) contrast(2);
+
   }
   
   .hero-title {
@@ -264,19 +321,33 @@ html, body {
     gap: 1rem;
   }
   
-  .hero-logos-mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
+  
   
   .hero-logos-mobile .side-logo {
     max-width: 72px;
     height: auto;
     object-fit: contain;
+  filter: brightness(2) contrast(2);
+    transition: all 0.3s ease;
   }
+  
+  /* Mobile styles for individual logo classes */
+  .hero-logos-mobile .logo-75-years {
+    margin-top: 21px;
+    width: 90px;
+    height: auto;
+    margin-left: -5px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+  }
+  .hero-logos-mobile .logo-100-years {
+    margin-left: 50px;
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+  }
+  
   
   .hero-left {
     order: 1;

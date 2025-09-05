@@ -1,5 +1,5 @@
 :root {
-  --nav-h: 72px;
+  --nav-h: 89px;
 }
 
 html, body {
@@ -13,10 +13,10 @@ html, body {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: transparent;
-  color: #fff;
+  background: hsla(0, 0%, 100%, 0.379);
+  color: #070707;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  /*backdrop-filter: blur(10px);*/
   height: var(--nav-h);
   display: flex;
   align-items: center;
@@ -25,7 +25,7 @@ html, body {
 .navigation.scrolled {
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  color: #333;
+  color: hsl(0, 0%, 20%);
 }
 
 /* CONTAINER */
@@ -53,11 +53,11 @@ html, body {
 }
 
 .logo-image {
-  height: 48px;
+  height: 70px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
-  filter: brightness(1.2);
+  filter: brightness(1.75);
 }
 
 .psg-logo-image {
@@ -76,7 +76,7 @@ html, body {
 .sep-line {
   width: 2px;
   height: 40px;
-  background-color: #ccc; /* light sep for dark bg */
+  background-color: #000000; /* light sep for dark bg */
   margin: 0 1rem;
 }
 
@@ -92,7 +92,7 @@ html, body {
 .conference-name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff; /* bright for dark bg */
+  color: #040404; /* bright for dark bg */
 }
 
 .institution-name {

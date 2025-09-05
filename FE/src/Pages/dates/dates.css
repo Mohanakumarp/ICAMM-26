@@ -6,7 +6,7 @@
   margin: 0;
   padding: 80px 20px;
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
-  min-height: 100vh;
+  min-height: calc(100vh - 89px);
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
