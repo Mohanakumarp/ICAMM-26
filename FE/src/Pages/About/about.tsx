@@ -1,4 +1,3 @@
-import React from 'react';
 import './about.css';
 import CollegeImg from '../../Assets/College.png';
 import DepartmentImg from '../../Assets/Department.png';
