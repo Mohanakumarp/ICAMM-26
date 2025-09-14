@@ -40,78 +40,29 @@ html, body {
   box-sizing: border-box;
 }
 
-/* LOGO SECTION */
-.logo-container {
+/* BRAND SECTION */
+.brand-title {
   display: flex;
   align-items: center;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo-image {
-  height: 70px;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  filter: brightness(1.75);
-}
-
-.psg-logo-image {
-  height: 48px;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  margin-right: 10px;
-}
-
-.navigation.scrolled .logo-image,
-.navigation.scrolled .psg-logo-image {
-  filter: brightness(1);
-}
-
-.sep-line {
-  width: 2px;
-  height: 40px;
-  background-color: #000000; /* light sep for dark bg */
-  margin: 0 1rem;
-}
-
-.navigation.scrolled .sep-line {
-  background-color: #333; /* dark sep for light bg */
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
 }
 
 .conference-name {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #040404; /* bright for dark bg */
-}
-
-.institution-name {
-  font-size: 1rem;
-  color: #ccc;
+  color: #1e90ff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-left: 30px;
 }
 
 .navigation.scrolled .conference-name {
-  color: #333;
-}
-
-.navigation.scrolled .institution-name {
-  color: #666;
+  color: #1e90ff;
 }
 
 /* NAV MENU */
 .desktop-menu {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -121,10 +72,38 @@ html, body {
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s ease;
+  padding: 0.5rem 0;
 }
 
 .nav-link:hover {
-  color: #0066cc;
+  color: #1e90ff;
+}
+
+/* REGISTER BUTTON */
+.register-btn {
+  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(30, 144, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.register-btn:hover {
+  background: linear-gradient(135deg, #0066cc 0%, #1e90ff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.4);
+}
+
+.mobile-register-btn {
+  margin-top: 1rem;
+  width: 100%;
 }
 
 /* MOBILE MENU TOGGLE */
@@ -210,27 +189,22 @@ html, body {
   .nav-container {
     padding: 0 0.75rem;
   }
-
-  .logo-text {
-    font-size: 0.9rem;
-  }
-
-  .psg-logo-image,
-  .logo-image {
-    height: 40px;
-  }
-  
-  .sep-line {
-    height: 30px;
-    margin: 0 0.5rem;
-  }
   
   .conference-name {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
-
-  .institution-name {
-    font-size: 0.8rem;
+  
+  .desktop-menu {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  
+  .register-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
   }
 }
 

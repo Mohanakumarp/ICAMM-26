@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './NavBar.css';
-import Logo from '../../Assets/logo.png';
-import PSGlogo from '../../Assets/PSGlogo.png';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,30 +30,25 @@ const Navigation = () => {
   return (
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <div className="logo-container">
-          <img 
-            src={PSGlogo} 
-            alt="PSG College of Technology Logo" 
-            className="psg-logo-image" 
-            onClick={() => navigate('/')} 
-            style={{ cursor: "pointer" }}
-          />
-          <div className="logo" onClick={() => navigate('/')} style={{ cursor: "pointer" }}>
-            <img src={Logo} alt="ICAMM 2026 Logo" className="logo-image" />
-            <div className="sep-line"></div>
-            <div className="logo-text">
-              <span className="conference-name">ICAMM'26</span>
-              <span className="institution-name">PSG College of Technology</span>
-            </div>
-          </div>
+        <div className="brand-title" onClick={() => navigate('/')} style={{ cursor: "pointer" }}>
+          <span className="conference-name">ICAMM'26</span>
         </div>
 
         {/* Desktop Navigation Menu */}
         <div className="desktop-menu">
           <a href="/" className="nav-link">Home</a>
+          <a href="/about" className="nav-link">About</a>
           <a href="/committee" className="nav-link">Committee</a>
           <a href="/speakers" className="nav-link">Speakers</a>
-          <a href="/domain" className="nav-link">Domains</a>
+          <a href="/dates" className="nav-link">Dates</a>
+          <a href="/details" className="nav-link">Details</a>
+          <a href="/registration" className="nav-link">Registration</a>
+          <button 
+            className="register-btn"
+            onClick={() => navigate('/registration')}
+          >
+            Register Now
+          </button>
         </div>
         
         {/* Mobile Menu Toggle Button */}
@@ -80,9 +73,21 @@ const Navigation = () => {
       <div className={`sidebar-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="sidebar-menu-links">
           <a href="/" className='nav-link' onClick={() => setMobileMenuOpen(false)}>Home</a>
+          <a href="/about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>About</a>
           <a href="/committee" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Committee</a>
           <a href="/speakers" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Speakers</a>
-          <a href="/domain" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Domains</a>
+          <a href="/dates" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Dates</a>
+          <a href="/details" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Details</a>
+          <a href="/registration" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Registration</a>
+          <button 
+            className="register-btn mobile-register-btn"
+            onClick={() => {
+              setMobileMenuOpen(false);
+              navigate('/registration');
+            }}
+          >
+            Register Now
+          </button>
         </div>
       </div>
       

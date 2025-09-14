@@ -55,7 +55,6 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 
@@ -179,7 +178,7 @@ html, body {
 .hero-title {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #1e90ff;
+  color: #002b58;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 0.8rem;
@@ -196,7 +195,7 @@ html, body {
 .hero-subtitle.highlight {
   font-size: 2rem;
   font-weight: 700;
-  color: #1e90ff;
+  color: #002b58;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 1rem;
@@ -213,7 +212,7 @@ html, body {
 .hero-org {
   font-size: 1.15rem;
   font-weight: 600;
-  color: #1e90ff;
+  color: #002b58;
   margin-top: 1rem;
   font-style: italic;
 }
@@ -248,7 +247,7 @@ html, body {
 }
 
 .sponsors-title {
-  color: #1e90ff;
+  color: #002b58;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -421,7 +420,7 @@ html, body {
 .hero-title {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #1e90ff;
+  color: #002b58;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 0.8rem;
@@ -438,7 +437,7 @@ html, body {
 .hero-subtitle.highlight {
   font-size: 2rem;
   font-weight: 700;
-  color: #1e90ff;
+  color: #002b58;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 1rem;
@@ -455,7 +454,7 @@ html, body {
 .hero-org {
   font-size: 1.15rem;
   font-weight: 600;
-  color: #1e90ff;
+  color: #002b58;
   margin-top: 1rem;
   font-style: italic;
 }
@@ -499,7 +498,7 @@ html, body {
 }
 
 .sponsors-title {
-  color: #1e90ff;
+  color: #002b58;
   font-size: 1.2rem;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -649,7 +648,7 @@ html, body {
 }
 
 .sponsors-title {
-  color: #1e90ff;
+  color: #002b58;
   font-size: 1.2rem;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -686,7 +685,7 @@ html, body {
 .hero-title {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #1e90ff;
+  color: #002b58;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 0.8rem;
@@ -703,7 +702,7 @@ html, body {
 .hero-subtitle.highlight {
   font-size: 2rem;
   font-weight: 700;
-  color: #1e90ff;
+  color: #002b58;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 1rem;
@@ -720,7 +719,7 @@ html, body {
 .hero-org {
   font-size: 1.15rem;
   font-weight: 600;
-  color: #1e90ff;
+  color: #002b58;
   margin-top: 1rem;
   font-style: italic;
 }
