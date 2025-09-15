@@ -70,10 +70,16 @@ body, html {
 
 .committee-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px 30px;
   justify-items: center;
   align-items: start;
+}
+
+/* Center single card in a row */
+.committee-grid:has(.committee-section:only-child) {
+  justify-content: center;
+  justify-items: center;
 }
 
 .committee-section {
