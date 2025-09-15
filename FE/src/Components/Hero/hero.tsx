@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
         <div className="header-content">
           <div className="header-left-logos">
             <img src={Logo75} alt="75 Years of PSG College of Technology" className="header-logo-75" />
-            <img src={inst} alt="PSG College of Technology" className="header-psg-logo" />
+            <img src={PSGLogo} alt="PSG College of Technology" className="header-psg-logo" />
           </div>
           
           <div className="header-center">
@@ -100,8 +100,8 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="header-right-logos">
+            <img src={inst} alt="PSG Institution" className="header-psg-logo" />
             <img src={Logo100} alt="100 Years of PSG Sons Charities" className="header-logo-100" />
-            <img src={PSGLogo} alt="PSG Institution" className="header-psg-logo" />
           </div>
         </div>
       </div>

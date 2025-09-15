@@ -16,12 +16,11 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ photo, name, designation, org
           <img src={photo} alt={name} className="profile-photo" />
         </div>
       </div>
-        <div className="card-body">
+      <div className="card-body">
         <h2 className="profile-name">{name}</h2>
         <p className="profile-designation" dangerouslySetInnerHTML={{ __html: designation }}></p>
         <p className="profile-organisation">{organisation}</p>
       </div>
-      
       <div className="card-footer">
         <div className="decorative-line"></div>
       </div>

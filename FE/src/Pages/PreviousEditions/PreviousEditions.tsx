@@ -8,37 +8,31 @@ const PreviousEditions: React.FC = () => {
     {
       year: '2025',
       title: 'ICAMM 2025',
-      description: 'Recent advances in Applied Mathematics and Modeling',
       image: '/src/Assets/icamm2025.jpg' // You'll need to add actual images
     },
     {
       year: '2023',
       title: 'ICAMM 2023',
-      description: 'Innovations in Computational Mathematics',
       image: '/src/Assets/icamm2023.jpg'
     },
     {
       year: '2021',
       title: 'ICAMM 2021',
-      description: 'Mathematical Modeling in Digital Era',
       image: '/src/Assets/icamm2021.jpg'
     },
     {
       year: '2018',
       title: 'ICAMM 2018',
-      description: 'Applied Mathematics for Engineering Solutions',
       image: '/src/Assets/icamm2018.jpg'
     },
     {
       year: '2016',
       title: 'ICAMM 2016',
-      description: 'Mathematical Applications in Science',
       image: '/src/Assets/icamm2016.jpg'
     },
     {
       year: '2014',
       title: 'ICAMM 2014',
-      description: 'Foundation of Applied Mathematical Modeling',
       image: '/src/Assets/icamm2014.jpg'
     }
   ];
@@ -107,7 +101,7 @@ const PreviousEditions: React.FC = () => {
                       </div>
                       <div className="edition-info">
                         <h3 className="edition-title">{edition.title}</h3>
-                        <p className="edition-description">{edition.description}</p>
+    
                       </div>
                     </div>
                   </div>
@@ -143,7 +137,7 @@ const PreviousEditions: React.FC = () => {
             <div className="stat-label">Years of Excellence</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">1000+</div>
+            <div className="stat-number">750+</div>
             <div className="stat-label">Participants</div>
           </div>
           <div className="stat-item">

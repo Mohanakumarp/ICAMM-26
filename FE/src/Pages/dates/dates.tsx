@@ -6,17 +6,17 @@ const Dates: React.FC = () => {
     {
       id: 1,
       title: "Paper Submission",
-      date: "September 25, 2025",
+      date: "April 29 , 2026",
       extended: "",
       icon: "📝",
       description: "Submit your original research papers",
       color: "blue",
-      status: "open"
+      status: "pending"
     },
     {
       id: 2,
       title: "Notification of Acceptance",
-      date: "Januaury 30, 2026",
+      date: "May 29, 2026",
       icon: "📧",
       description: "Authors will be notified about paper acceptance",
       color: "green",
@@ -25,7 +25,7 @@ const Dates: React.FC = () => {
     {
       id: 3,
       title: "Camera Ready Paper Submission",
-      date: "February 28, 2026",
+      date: "June 10, 2026",
       icon: "📄",
       description: "Submit final version of accepted papers",
       color: "orange",
@@ -34,7 +34,7 @@ const Dates: React.FC = () => {
     {
       id: 4,
       title: "Author Registration",
-      date: "June 15 , 2026",
+      date: "June 17 , 2026",
       icon: "✅",
       description: "Complete registration for conference attendance",
       color: "purple",
