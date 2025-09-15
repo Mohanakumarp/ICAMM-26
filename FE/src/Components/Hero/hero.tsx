@@ -4,8 +4,10 @@ import video from '../../Assets/video.mp4';
 import Countdown from './Countdown';
 import Logo75 from '../../Assets/75yearsLogo_PSGCollegeofTech.png';
 import Logo100 from '../../Assets/100yearsLogo_PsgSonsCharities.png';
-import SampleSponsorLogo from '../../Assets/PSGlogo.png';
-
+import PSGLogo from '../../Assets/PSGlogo.png';
+import MainLogo from '../../Assets/logo.png';
+import logo from '../../Assets/logo (2).png';
+import inst from '../../Assets/PSG INSTITUTION.png'
 const Hero: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
@@ -75,61 +77,67 @@ const Hero: React.FC = () => {
 
   return (
     <section className="hero">
-      <div className="hero-background">
-        <video className="video-background" autoPlay loop muted playsInline>
-          <source src={video} type="video/mp4" />
-        </video>
-        <div className="video-overlay"></div>
-      </div>
-
-      <div className="math-symbols"></div>
-
-      {isMobile ? (
-        <div className="hero-inner">
-          <div className="hero-center">
-            <h1 className="hero-title">Seventh International Conference On</h1>
-            <h2 className="hero-subtitle highlight">Applied Mathematical Models</h2>
-            <h2 className="hero-subtitle">ICAMM 2026</h2>
-            <p className="hero-date">June 08–10, 2026</p>
-            <p className="hero-org">Organized by</p>
-            <p className="hero-inst">Department of Mathematics<br />PSG College of Technology</p>
-            <p className="hero-loc">Coimbatore – 641004, Tamil Nadu, India</p>
+      {/* Top Header Section with White Background */}
+      <div className="hero-header">
+        <div className="header-content">
+          <div className="header-left-logos">
+            <img src={Logo75} alt="75 Years of PSG College of Technology" className="header-logo-75" />
+            <img src={inst} alt="PSG College of Technology" className="header-psg-logo" />
+          </div>
+          
+          <div className="header-center">
+            <h1 className="header-title">PSG COLLEGE OF TECHNOLOGY</h1>
+              <p className="department-text">Department of Mathematics</p>
+              <p className="address-text">Coimbatore – 641004, Tamil Nadu, India</p>
             
-            <div className="hero-logos-mobile">
-              <img src={Logo75} alt="75 Years of PSG College of Technology" className="logo-75-years" />
-              <img src={Logo100} alt="100 Years of PSG Sons Charities" className="logo-100-years" />
+            {/* Mobile all logos horizontal */}
+            <div className="header-all-logos-mobile">
+              <img src={Logo75} alt="75 Years of PSG College of Technology" />
+              <img src={inst} alt="PSG Institution" />
+              <img src={Logo100} alt="100 Years of PSG Sons Charities" />
+              <img src={PSGLogo} alt="PSG Logo" />
             </div>
           </div>
-        </div>
-      ) : (
-        <div className="hero-inner">
-          <div className="hero-left">
-            <img src={Logo75} alt="75 Years of PSG College of Technology" className="logo-75-years" />
-          </div>
           
-          <div className="hero-center">
-            <h1 className="hero-title">Seventh International Conference On</h1>
-            <h2 className="hero-subtitle highlight">Applied Mathematical Models</h2>
-            <h2 className="hero-subtitle">ICAMM 2026</h2>
-            <p className="hero-date">June 10–12, 2026</p>
-            <p className="hero-org">Organized by</p>
-            <p className="hero-inst">Department of Mathematics<br />PSG College of Technology</p>
-            <p className="hero-loc">Coimbatore – 641004, Tamil Nadu, India</p>
-          </div>
-          
-          <div className="hero-right">
-            <img src={Logo100} alt="100 Years of PSG Sons Charities" className="logo-100-years" />
+          <div className="header-right-logos">
+            <img src={Logo100} alt="100 Years of PSG Sons Charities" className="header-logo-100" />
+            <img src={PSGLogo} alt="PSG Institution" className="header-psg-logo" />
           </div>
         </div>
-      )}
+      </div>
 
-      {!isMobile && <Countdown />}
+      {/* Main Content Section with Video Background */}
+      <div className="hero-main">
+        <div className="hero-background">
+          <video className="video-background" autoPlay loop muted playsInline>
+            <source src={video} type="video/mp4" />
+          </video>
+          <div className="video-overlay"></div>
+        </div>
 
-      <div className="sponsors-section">
-        <h3 className="sponsors-title">Sponsors</h3>
-        <div className="sponsors-logos">
-          <img src={SampleSponsorLogo} alt="Sponsor" className="sponsor-logo" />
-          <img src={SampleSponsorLogo} alt="Sponsor" className="sponsor-logo" />
+        <div className="math-symbols"></div>
+
+        <div className="hero-content">
+          <div className="conference-info">
+            <div className="main-logo-container">
+              <img src={logo} alt="ICAMM Logo" className="main-logo" />
+            </div>
+            <h3 className="conference-name">ICAMM 2026</h3>
+            <h1 className="conference-title">SEVENTH INTERNATIONAL CONFERENCE ON</h1>
+            <h2 className="conference-theme">APPLIED MATHEMATICAL MODELS</h2>
+            <p className="conference-dates">June 10 - 12, 2026</p>
+          </div>
+
+          {!isMobile && (
+            <div className="countdown-section">
+              <Countdown />
+            </div>
+          )}
+        </div>
+
+        <div className="sponsors-section">
+          <h3 className="sponsors-title">Sponsors</h3>
+          <p className="sponsors-text">To be announced</p>
         </div>
       </div>
     </section>

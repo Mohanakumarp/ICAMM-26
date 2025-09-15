@@ -1,5 +1,5 @@
 :root {
-  --nav-h: 89px;
+  --nav-h: 80px;
 }
 
 html, body {
@@ -13,10 +13,10 @@ html, body {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: hsla(0, 0%, 100%, 0.379);
-  color: #070707;
+  background: rgba(44, 90, 160, 0.95);
+  color: white;
   transition: all 0.3s ease;
-  /*backdrop-filter: blur(10px);*/
+  backdrop-filter: blur(10px);
   height: var(--nav-h);
   display: flex;
   align-items: center;
@@ -49,14 +49,26 @@ html, body {
 .conference-name {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #1e90ff;
+  color: white;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-left: 30px;
 }
 
 .navigation.scrolled .conference-name {
-  color: #1e90ff;
+  color: #2c5aa0;
+}
+
+.navigation.scrolled .register-btn {
+  background: #2c5aa0;
+  color: white;
+  border: 2px solid #2c5aa0;
+}
+
+.navigation.scrolled .register-btn:hover {
+  background: transparent;
+  color: #2c5aa0;
+  border: 2px solid #2c5aa0;
 }
 
 /* NAV MENU */
@@ -76,29 +88,31 @@ html, body {
 }
 
 .nav-link:hover {
-  color: #1e90ff;
+  color: #2c5aa0;
 }
 
 /* REGISTER BUTTON */
 .register-btn {
-  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
-  color: white;
-  border: none;
+  background: white;
+  color: #2c5aa0;
+  border: 2px solid white;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(30, 144, 255, 0.3);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .register-btn:hover {
-  background: linear-gradient(135deg, #0066cc 0%, #1e90ff 100%);
+  background: transparent;
+  color: white;
+  border: 2px solid white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
 }
 
 .mobile-register-btn {
@@ -192,6 +206,7 @@ html, body {
   
   .conference-name {
     font-size: 1.4rem;
+    color: white;
   }
   
   .desktop-menu {
