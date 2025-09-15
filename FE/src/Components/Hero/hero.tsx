@@ -5,7 +5,7 @@ import Countdown from './Countdown';
 import Logo75 from '../../Assets/75yearsLogo_PSGCollegeofTech.png';
 import Logo100 from '../../Assets/100yearsLogo_PsgSonsCharities.png';
 import PSGLogo from '../../Assets/PSGlogo.png';
-import MainLogo from '../../Assets/logo.png';
+/*import MainLogo from '../../Assets/logo.png';*/
 import logo from '../../Assets/logo (2).png';
 import inst from '../../Assets/PSG INSTITUTION.png'
 const Hero: React.FC = () => {

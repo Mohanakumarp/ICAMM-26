@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/home';
 import About from './Pages/About/about';
 import Committee from './Pages/Comitte/comittee';
-import Domain from './Pages/Domin/domain';
+/*import Domain from './Pages/Domin/domain';*/
 import Speaker from './Pages/Speaker/speakers';
 import Dates from './Pages/dates/dates';
 import Details from './Pages/details/details';
