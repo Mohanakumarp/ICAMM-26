@@ -39,7 +39,12 @@ const About = () => {
               </div>
             </div>
             <div className="about-image-container">
-              <img src={CollegeImg} alt="PSG College of Technology" className="about-image" />
+              <img
+              src={CollegeImg}
+              alt="PSG College of Technology"
+              className="about-image"
+              style={{ border: '1px solid #136AD5' }}
+              />
             </div>
           </div>
         </div>
@@ -72,7 +77,7 @@ const About = () => {
               </div>
             </div>
             <div className="about-image-container">
-              <img src={DepartmentImg} alt="Department of Mathematics" className="about-image" />
+              <img src={DepartmentImg} alt="Department of Mathematics" className="about-image" style={{ border: '1px solid #136AD5' }} />
             </div>
           </div>
         </div>
@@ -127,7 +132,7 @@ const About = () => {
               </div>
             </div>
             <div className="about-image-container">
-              <img src={ConferenceImg} alt="ICAMM'26 Conference" className="about-image" />
+              <img src={ConferenceImg} alt="ICAMM'26 Conference" className="about-image" style={{ border: '1px solid #136AD5' }} />
             </div>
           </div>
         </div>

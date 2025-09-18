@@ -1,49 +1,53 @@
-/* About Section Styles */
+/* ===== PROFESSIONAL ABOUT PAGE ===== */
 .about-section {
-  padding: 4rem 2rem;
-  color: #fff;
+  background: white;
+  min-height: 100vh;
+  padding: calc(var(--nav-height, 80px) + 2rem) 0 4rem 0;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container-max, 1200px);
   margin: 0 auto;
+  padding: 0 var(--spacing-lg, 1.5rem);
+  background-color: #ffffff;
 }
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #1e90ff;
+  font-size: var(--text-5xl, 3rem);
+  font-weight: var(--font-bold, 700);
+  margin-bottom: var(--spacing-3xl, 4rem);
+  color: #D57B13;
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #1e90ff, #00bfff);
-}
-
 .about-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  padding: 2rem;
-  margin-bottom: 3rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: var(--bg-primary, #ffffff);
+  padding: var(--spacing-2xl, 3rem);
+  margin-bottom: var(--spacing-2xl, 3rem);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-base, 0.3s ease);
+  border: 1px solid #136AD5;
+  position: relative;
+  overflow: hidden;
 }
 
 .about-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px var(--shadow-dark);
+  border-color: #136AD5;
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
 }
 
 .about-card-header {
@@ -61,6 +65,7 @@
 .about-image-container {
   flex: 0 0 300px;
   max-width: 300px;
+  border-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +74,7 @@
 .about-image {
   width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-color: black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -80,25 +85,27 @@
 }
 
 .about-heading {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: #1e90ff;
+  font-size: var(--text-2xl, 1.5rem);
+  font-weight: var(--font-bold, 700);
+  margin-bottom: var(--spacing-md, 1rem);
+  color: #136AD5;
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: var(--spacing-sm, 0.5rem);
+  display: inline-block;
 }
 
 .about-subheading {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: gray;
-  font-weight: 500;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: var(--text-lg, 1.125rem);
+  margin-bottom: var(--spacing-lg, 1.5rem);
+  color: var(--text-light, #7f8c8d);
+  font-weight: var(--font-medium, 500);
 }
 
 .about-content {
-  font-size: 1.05rem;
+  font-size: var(--text-base, 1rem);
   line-height: 1.7;
-  color: black;
-  padding: 0 10px;
+  color: var(--text-color, #2c3e50);
+  text-align: justify;
 }
 
 .about-content p {
@@ -109,12 +116,53 @@
   margin-bottom: 0;
 }
 
-/* Card color variations */
-.college,
-.department,
-.conference,
-.vision-mission {
-  background: #f0f0f0;
+/* Professional card variations */
+.about-card.featured {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(64, 181, 168, 0.05) 100%);
+  border: 2px solid var(--primary-color);
+}
+
+.about-card.featured::before {
+  height: 6px;
+  background: var(--gradient-secondary);
+}
+
+/* Stats section */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg, 1.5rem);
+  margin: var(--spacing-2xl, 3rem) 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--spacing-xl, 2rem);
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg, 0.75rem);
+  border: 2px solid var(--primary-color);
+  transition: var(--transition-base);
+}
+
+.stat-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-primary);
+}
+
+.stat-number {
+  font-size: var(--text-3xl, 1.875rem);
+  font-weight: var(--font-bold, 700);
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: var(--spacing-sm, 0.5rem);
+}
+
+.stat-label {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: var(--font-medium, 500);
 }
 
 /* Vision and Mission Styles */
@@ -142,7 +190,7 @@
   content: "•";
   position: absolute;
   left: 0.5rem;
-  color: #1e90ff;
+  color: #136AD5;
   font-size: 1.5rem;
   line-height: 1;
 }
@@ -150,33 +198,36 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .about-section {
-    padding: 3rem 1.5rem;
+    padding: calc(var(--nav-height, 80px) + 1rem) 0 2rem 0;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md, 1rem);
   }
 
   .section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: var(--text-4xl, 2.25rem);
+    margin-bottom: var(--spacing-2xl, 3rem);
+  }
+
+  .about-card {
+    padding: var(--spacing-xl, 2rem);
+    margin-bottom: var(--spacing-xl, 2rem);
   }
 
   .about-card-header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: var(--spacing-lg, 1.5rem);
   }
 
   .about-image-container {
-    order: -1; /* Show image ABOVE text */
+    order: -1;
+    flex: none;
     width: 100%;
-    margin-bottom: 1.5rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .about-image {
-    width: 100%; /* Keep full width */
-    max-width: 300px; /* Preserve desktop size */
-    height: auto;
-    border-radius: 12px;
+    max-width: 250px;
+    margin-bottom: var(--spacing-lg, 1.5rem);
   }
 
   .about-text-content {
@@ -184,42 +235,75 @@
   }
 
   .about-heading {
-    font-size: 1.5rem;
+    font-size: var(--text-xl, 1.25rem);
+    text-align: center;
   }
 
   .about-subheading {
-    font-size: 1.3rem;
+    font-size: var(--text-lg, 1.125rem);
+    text-align: center;
   }
 
   .about-content {
-    font-size: 1rem;
-    padding: 0 5px;
-    text-align: justify;
+    font-size: var(--text-sm, 0.875rem);
+    text-align: left;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md, 1rem);
   }
 }
 
 @media (max-width: 480px) {
   .about-section {
-    padding: 2rem 1rem;
+    padding: calc(var(--nav-height, 80px) + 0.5rem) 0 1.5rem 0;
   }
 
-  .about-card {
-    padding: 1.5rem;
+  .container {
+    padding: 0 var(--spacing-sm, 0.5rem);
   }
 
   .section-title {
-    font-size: 1.8rem;
+    font-size: var(--text-3xl, 1.875rem);
+    margin-bottom: var(--spacing-xl, 2rem);
+  }
+
+  .about-card {
+    padding: var(--spacing-lg, 1.5rem);
+    margin-bottom: var(--spacing-lg, 1.5rem);
   }
 
   .about-heading {
-    font-size: 1.3rem;
+    font-size: var(--text-lg, 1.125rem);
   }
 
   .about-subheading {
-    font-size: 1.1rem;
+    font-size: var(--text-base, 1rem);
+  }
+
+  .about-content {
+    font-size: var(--text-xs, 0.75rem);
   }
 
   .about-image {
-    max-width: 100%;
+    max-width: 200px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm, 0.5rem);
+  }
+
+  .stat-item {
+    padding: var(--spacing-md, 1rem);
+  }
+
+  .stat-number {
+    font-size: var(--text-2xl, 1.5rem);
+  }
+
+  .stat-label {
+    font-size: var(--text-xs, 0.75rem);
   }
 }
