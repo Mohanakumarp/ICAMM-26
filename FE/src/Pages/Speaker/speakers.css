@@ -1,3 +1,15 @@
+/* Extra Responsive for Speaker Cards */
+@media (max-width: 400px) {
+  .speakers-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 2vw;
+  }
+  .speaker-card-wrapper .profile-card {
+    max-width: 98vw;
+    min-width: 0;
+  }
+}
 /* Speakers Component Styles - Gold, Blue, and White Theme */
 
 .speakers-container {

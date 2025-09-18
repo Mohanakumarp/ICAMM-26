@@ -6,7 +6,6 @@ import bhargav from '../../images/bhargav.jpg';
 import bhakthi from '../../images/bhakthi.jpg';
 import sushmitha from '../../images/sushmitha.jpg';
 import kavikumar from '../../images/kavikumar.jpg';
-import arnfried from '../../images/arnfried.png';
 import asadi from '../../images/asadi.png';
 import sujatha from '../../images/sujatha.jpg';
 import oscar from '../../images/oscar.jpg';
@@ -27,7 +26,7 @@ interface Speaker {
 const speakers: Speaker[] = [
   {
     id: 6,
-    photo: arnfried,
+    photo: 'src/images/arnfried.jpg',
     name: 'Prof. Arnfried Kemnitz',
     designation: 'Department of Mathematics',
     organisation: 'Technische Universität Braunschweig, Germany',
@@ -35,7 +34,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 7,
-    photo: asadi,
+    photo: 'src/images/asadis.jpg',
     name: 'Dr Asadi Srinivasulu',
     designation: 'IT Professor',
     organisation: 'University of Newcastle , Australia',
@@ -50,11 +49,19 @@ const speakers: Speaker[] = [
     link: 'https://www.math.ubc.ca/~sujatha/'
   },
   {
+    id: 1,
+    photo: 'src/images/rajeshkumar.jpg',
+    name: 'Prof. Rajesh Kumar',
+    designation: 'Dept. of Electrical Engg',
+    organisation: 'MNIT Jaipur and Dept. of Health Science, Univ. of Johannesburg, South Africa',
+    link: 'https://www.researchgate.net/profile/Rajesh-Kumar-174'
+  },
+  {
     id: 5,
     photo: kavikumar,
     name: 'Dr Kavikumar Jacob',
     designation: 'Department of Mathematics and Statistics',
-    organisation: 'Universiti Tun Hussein Onn Malaysia, Malaysia',
+    organisation: 'Universiti Tun Hussein Onn Malaysia',
     link: 'https://www.uthm.edu.my/en/staff/kavikumar-jacob-4933'
   },
   {
@@ -83,7 +90,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 3,
-    photo: bhakthi,
+    photo: 'src/images/bhakthimanna.webp',
     name: 'Prof Bhakti Bhusan Manna',
     designation: 'Department of Mathematics',
     organisation: 'Indian Institute of Technology Hyderabad',
@@ -106,16 +113,8 @@ const speakers: Speaker[] = [
     link: 'https://www.drdo.gov.in/labs-establishments/research-centre-imarat-rci'
   },
   {
-    id: 1,
-    photo: rajesh,
-    name: 'Prof. Rajesh Kumar',
-    designation: 'Dept. of Electrical Engg',
-    organisation: 'MNIT Jaipur and Dept. of Health Science, Univ. of Johannesburg, South Africa',
-    link: 'https://www.researchgate.net/profile/Rajesh-Kumar-174'
-  },
-  {
     id: 4,
-    photo: sushmitha,
+    photo: 'src/images/sushmithap.jpg',
     name: 'Dr. Sushmitha. P',
     designation: 'Department of Mathematics',
     organisation: 'Indian Institute of Technology Patna',
@@ -135,21 +134,13 @@ const Speakers: React.FC = () => {
       <div className="speakers-grid">
         {speakers.map((speaker) => (
           <div key={speaker.id} className="speaker-card-wrapper">
-            <div className="speaker-card-inner">
-              <ProfileCard
-                photo={speaker.photo}
-                name={speaker.name}
-                designation={speaker.designation}
-                organisation={speaker.organisation}
-              />
-              <button
-                className="know-more-btn"
-                style={{ marginTop: '16px', width: '100%', borderRadius: '8px', background: 'linear-gradient(90deg, #1e90ff, #4169e1)', color: '#fff', fontWeight: 600, fontSize: '1rem', padding: '10px 0', border: 'none', cursor: 'pointer', boxShadow: '0 2px 8px rgba(30,144,255,0.12)' }}
-                onClick={() => window.open(speaker.link, '_blank')}
-              >
-                Know More
-              </button>
-            </div>
+            <ProfileCard
+              photo={speaker.photo}
+              name={speaker.name}
+              designation={speaker.designation}
+              organisation={speaker.organisation}
+              knowMoreLink={speaker.link}
+            />
           </div>
         ))}
       </div>

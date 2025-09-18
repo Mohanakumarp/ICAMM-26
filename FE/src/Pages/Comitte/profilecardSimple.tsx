@@ -1,17 +1,21 @@
 import React from 'react';
-import './profilecard.css';
+import './profilecardSimple.css';
 
-interface ProfileCardProps {
+interface ProfileCardSimpleProps {
   photo: string;
   name: string;
   designation: string;
   organisation: string;
   knowMoreLink?: string;
+  position?: string;
 }
 
-const ProfileCard: React.FC<ProfileCardProps> = ({ photo, name, designation, organisation, knowMoreLink }) => {
+const ProfileCardSimple: React.FC<ProfileCardSimpleProps> = ({ photo, name, designation, organisation, knowMoreLink, position }) => {
   return (
     <div className="profile-card-simple">
+      {position && (
+        <div className="profile-position-header">{position}</div>
+      )}
       <div className="profile-photo-simple-container">
         <img src={photo} alt={name} className="profile-photo-simple" />
       </div>
@@ -34,4 +38,4 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ photo, name, designation, org
   );
 };
 
-export default ProfileCard;
+export default ProfileCardSimple;
