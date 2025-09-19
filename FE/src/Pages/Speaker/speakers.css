@@ -14,13 +14,17 @@
 
 .speakers-container {
   width: 100%;
-  max-width: 1400px;
-  padding: 40px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px;
   background: #ffffff;
   min-height: calc(100vh - 89px);
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .speakers-container::before {
@@ -136,13 +140,13 @@
 .speakers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  justify-items: center;
-  align-items: center;
-  padding: 0 20px;
-  max-width: 1400px;
-  margin: 0 auto;
+  gap: 32px;
   width: 100%;
+  max-width: 1200px;
+  margin: 32px auto 0 auto;
+  justify-items: center;
+  align-items: stretch;
+  justify-content: center;
   position: relative;
   z-index: 2;
 }
