@@ -1,12 +1,12 @@
 import React from 'react';
 import ProfileCard from '../Comitte/profilecard';
 import './speakers.css';
-import rajesh from '../../images/rajesh.jpg';
+// import rajesh from '../../images/rajesh.jpg';
 import bhargav from '../../images/bhargav.jpg';
-import bhakthi from '../../images/bhakthi.jpg';
-import sushmitha from '../../images/sushmitha.jpg';
+// import bhakthi from '../../images/bhakthi.jpg';
+// import sushmitha from '../../images/sushmitha.jpg';
 import kavikumar from '../../images/kavikumar.jpg';
-import asadi from '../../images/asadi.png';
+// import asadi from '../../images/asadi.png';
 import sujatha from '../../images/sujatha.jpg';
 import oscar from '../../images/oscar.jpg';
 import selvanathan from '../../images/selvanathan.jpg';

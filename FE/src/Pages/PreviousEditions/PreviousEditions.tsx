@@ -90,7 +90,7 @@ const PreviousEditions: React.FC = () => {
                           src={edition.image} 
                           alt={`${edition.title} Event Photo`}
                           className="edition-image"
-                          onError={(e) => {
+                          onError={() => {
                             // Fallback to a placeholder if image doesn't exist
                             //(e.target as HTMLImageElement).src = `https://via.placeholder.com/800x600/f3f4f6/374151?text=${edition.title}`;
                           }}
