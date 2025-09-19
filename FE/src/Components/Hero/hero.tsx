@@ -125,7 +125,7 @@ const Hero: React.FC = () => {
             <h3 className="conference-name">ICAMM 2026</h3>
             <h1 className="conference-title">SEVENTH INTERNATIONAL CONFERENCE ON</h1>
             <h2 className="conference-theme">APPLIED MATHEMATICAL MODELS</h2>
-            <p className="conference-dates">June 10 - 12, 2026</p>
+            <p className="conference-dates">July 8 & 10, 2026</p>
           </div>
 
           {!isMobile && (
