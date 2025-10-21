@@ -22,7 +22,7 @@ const Home = () => {
             <Details />
             <Registration />
             <Payment />
-            <PreviousEditions />
+            {/* <PreviousEditions /> */}
 
         </div>
     );
