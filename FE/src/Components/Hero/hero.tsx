@@ -86,7 +86,9 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="header-center">
-            <h1 className="header-title">PSG COLLEGE OF TECHNOLOGY</h1>
+            <h1 className="header-title" style={{ whiteSpace: 'nowrap', textAlign: 'center', width: '100%' }}>
+              PSG COLLEGE OF TECHNOLOGY
+            </h1>
               <p className="department-text">Department of Mathematics</p>
               <p className="address-text">Coimbatore – 641004, Tamil Nadu, India</p>
             

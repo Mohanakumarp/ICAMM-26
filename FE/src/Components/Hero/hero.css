@@ -23,9 +23,11 @@ html, body {
 /* === HERO HEADER (White Background Section) === */
 .hero-header {
   background: white;
-  padding: 10px;
   border-bottom: 2px solid #e0e0e0;
-  height: 150px;
+  min-height: 160px;
+  height: auto;
+  padding: 1rem 2rem;
+  overflow: hidden;
 }
 
 .header-content {
@@ -35,6 +37,7 @@ html, body {
   max-width: 1400px;
   margin: 0 auto;
   gap: 2rem;
+  height: 100%;
 }
 
 .header-left-logos, .header-right-logos {
@@ -443,14 +446,42 @@ html, body {
 }
 
 @media (max-width: 1024px) {
+  .hero-header {
+    padding: 1rem;
+    min-height: auto;
+    height: auto;
+  }
+  
   .header-content {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.5rem;
     text-align: center;
+    padding: 0;
+    width: 100%;
   }
   
   .header-left-logos, .header-right-logos {
     display: none;
+  }
+  
+  .header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .main-logo-container {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-logo {
+    height: 80px;
   }
   
   .header-all-logos-mobile {
@@ -459,7 +490,8 @@ html, body {
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
-    margin: 1rem 0;
+    width: 100%;
+    margin: 0.5rem 0;
   }
   
   .header-all-logos-mobile img {
@@ -468,21 +500,47 @@ html, body {
     object-fit: contain;
   }
   
+  .header-info {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+  }
+  
   .header-title {
-    font-size: 1.6rem;
+    font-size: 1rem;
     line-height: 1.2;
+    margin: 0.3rem auto;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .header-location {
+    font-size: 1rem;
+    margin: 0.3rem auto;
+    text-align: center;
+    width: 100%;
   }
   
   .department-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin: 0.3rem auto;
+    text-align: center;
+    width: 100%;
   }
   
   .college-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin: 0.3rem auto;
+    text-align: center;
+    width: 100%;
   }
   
   .address-text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    margin: 0.3rem auto;
+    text-align: center;
+    width: 100%;
   }
   
   .conference-title {
