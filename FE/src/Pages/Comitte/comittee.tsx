@@ -1,9 +1,10 @@
 import ProfileCardSimple from './profilecardSimple';
 import './committee.css';
+import * as images from '../../images';
 
 const committeeMembers = [
   {
-    photo: '/src/images/trustee.jpg',
+    photo: images.trustee,
     name: 'Shri L Gopalakrishnan',
     designation: 'Managing Trustee',
     organisation: "PSG & Sons' Charities Trust",
@@ -11,7 +12,7 @@ const committeeMembers = [
     position: 'PATRON'
   },
   {
-    photo: '/src/images/principal.jpg',
+    photo: images.principal,
     name: 'Dr K Prakasan',
     designation: 'Principal',
     organisation: 'PSG College of Technology',
@@ -19,7 +20,7 @@ const committeeMembers = [
     position: 'CO - PATRON'
   },
   {
-    photo: '/src/images/hod_maths.jpeg',
+    photo: images.hod_maths,
     name: 'Dr C Porkodi',
     designation: 'Professor and Head, Department of Mathematics',
     organisation: 'PSG College of Technology',
@@ -27,7 +28,7 @@ const committeeMembers = [
     position: 'CONVENOR'
   },
   {
-    photo: '/src/images/rsl.png',
+    photo: images.rsl,
     name: 'Dr R Subalakshmi',
     designation: 'Assistant Professor (Sl. Gr.), Department of Mathematics',
     organisation: 'PSG College of Technology',
@@ -40,7 +41,7 @@ const committeeMembers = [
 
 const advisoryCommittee = [
   {
-    photo: '/src/images/john.webp',
+    photo: images.john,
     name: 'Dr. John Rozario Jegaraj',
     designation: 'Technology Director & Senior Scientist (G) ',
     organisation: 'DRDO , India',
@@ -48,7 +49,7 @@ const advisoryCommittee = [
     position: ''
   },
   {
-    photo: '/src/images/pandian.jpg',
+    photo: images.pandian,
     name: 'Dr. Pandian P.S.',
     designation: 'Scientist, Defence Bioengineering and Electromedical Laboratory',
     organisation: 'DRDO , India',
@@ -56,7 +57,7 @@ const advisoryCommittee = [
     position: ''
   },
   {
-    photo: '/src/images/sankar.jpg',
+    photo: images.sankar,
     name: 'Dr. CH. N. A. B. Sankar',
     designation: 'Scientist, Research Centre Imarat',
     organisation: 'DRDO , India',
@@ -64,7 +65,7 @@ const advisoryCommittee = [
     position: ''
   },
   {
-    photo: '/src/images/arumuganathan.png',
+    photo: images.arumuganathan,
     name: 'Dr. Arumuganathan R',
     designation: 'Professor , Department of Mathematics',
     organisation: 'PSG College of Technology',
@@ -75,7 +76,7 @@ const advisoryCommittee = [
 
 const technicalCommittee = [
   {
-    photo: '/src/images/mahesh.webp',
+    photo: images.mahesh,
     name: 'Dr. Maheshanand',
     designation: 'Professor and Head of the Department of Mathematics',
     organisation: 'IIIT Roorkee',
@@ -83,7 +84,7 @@ const technicalCommittee = [
     position: ''
   },
   {
-    photo: '/src/images/abhay.jpg',
+    photo: images.abhay,
     name: 'Dr. Abhay Kumar Singh',
     designation: 'Associate Professor, Department of Mathematics and Computing',
     organisation: 'IIT (ISM), Dhanbad',
@@ -91,7 +92,7 @@ const technicalCommittee = [
     position: ''
   },
   {
-    photo: '/src/images/rubell.jpg',
+    photo: images.rubell,
     name: 'Dr. Rubell Marion Lincy George',
     designation: 'Assistant Professor & Head - Department of Computer Science and Engineering',
     organisation: 'IIIT Kottayam',
@@ -99,7 +100,7 @@ const technicalCommittee = [
     position: ''
   },
   {
-    photo: '/src/images/amalanjosephantony (1).jpg',
+    photo: images.amalanjosephantony_1,
     name: 'Dr. Amalan Joseph Antony A',
     designation: 'Assistant Professor',
     organisation: 'IIITDM Kancheepuram',
@@ -107,7 +108,7 @@ const technicalCommittee = [
     position: ''
   },
   {
-    photo: '/src/images/Drsgk-Manikandan.webp',
+    photo: images.drsgkManikandan,
     name: 'Dr. Manikandan SGK',
     designation: 'Scientist',
     organisation: 'ISRO',
@@ -115,7 +116,7 @@ const technicalCommittee = [
     position: ''
   },
   {
-    photo: '/src/images/joseph.jpg',
+    photo: images.joseph,
     name: 'Dr. Joseph Winston ',
     designation: 'Scientist',
     organisation: 'IGCAR',

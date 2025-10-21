@@ -1,17 +1,7 @@
 import React from 'react';
 import ProfileCard from '../Comitte/profilecard';
 import './speakers.css';
-// import rajesh from '../../images/rajesh.jpg';
-import bhargav from '../../images/bhargav.jpg';
-// import bhakthi from '../../images/bhakthi.jpg';
-// import sushmitha from '../../images/sushmitha.jpg';
-import kavikumar from '../../images/kavikumar.jpg';
-// import asadi from '../../images/asadi.png';
-import sujatha from '../../images/sujatha.jpg';
-import oscar from '../../images/oscar.jpg';
-import selvanathan from '../../images/selvanathan.jpg';
-import apoorva from '../../images/apoorva.jpg';
-import john from '../../images/john.webp';
+import * as images from '../../images';
 
 
 interface Speaker {
@@ -26,7 +16,7 @@ interface Speaker {
 const speakers: Speaker[] = [
   {
     id: 6,
-    photo: 'src/images/arnfried.jpg',
+    photo: images.arnfried,
     name: 'Prof. Arnfried Kemnitz',
     designation: 'Department of Mathematics',
     organisation: 'Technische Universität Braunschweig, Germany',
@@ -34,7 +24,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 7,
-    photo: 'src/images/asadis.jpg',
+    photo: images.asadis,
     name: 'Dr Asadi Srinivasulu',
     designation: 'IT Professor',
     organisation: 'University of Newcastle , Australia',
@@ -42,7 +32,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 8,
-    photo: sujatha,
+    photo: images.sujatha,
     name: 'Dr Sujatha Ramdorai',
     designation: 'Mathematics Department',
     organisation: 'University of British Columbia, Canada',
@@ -50,7 +40,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 1,
-    photo: 'src/images/rajeshkumar.jpg',
+    photo: images.rajeshkumar,
     name: 'Prof. Rajesh Kumar',
     designation: 'Dept. of Electrical Engg',
     organisation: 'MNIT Jaipur and Dept. of Health Science, Univ. of Johannesburg, South Africa',
@@ -58,7 +48,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 5,
-    photo: kavikumar,
+    photo: images.kavikumar,
     name: 'Dr Kavikumar Jacob',
     designation: 'Department of Mathematics and Statistics',
     organisation: 'Universiti Tun Hussein Onn Malaysia',
@@ -66,7 +56,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 10,
-    photo: oscar,
+    photo: images.oscar,
     name: 'Prof. Oscar Castillo',
     designation: 'Professor of Computer Science',
     organisation: 'Tijuana Institute of Technology, Tijuana, Mexico',
@@ -74,7 +64,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 11,
-    photo: selvanathan,
+    photo: images.selvanathan,
     name: 'Dr Selvanathan Sivalingam',
     designation: 'Technology Leader – Digitalization',
     organisation: 'Trondheim, Trøndelag, Norway',
@@ -82,7 +72,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 12,
-    photo: apoorva,
+    photo: images.apoorva,
     name: 'Dr Apoorva khare',
     designation: 'Associate Professor, Department of Mathematics',
     organisation: 'Indian Institute of Science, Bengaluru',
@@ -90,7 +80,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 3,
-    photo: 'src/images/bhakthimanna.webp',
+    photo: images.bhakthimanna,
     name: 'Prof Bhakti Bhusan Manna',
     designation: 'Department of Mathematics',
     organisation: 'Indian Institute of Technology Hyderabad',
@@ -98,7 +88,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 2,
-    photo: bhargav,
+    photo: images.bhargav,
     name: 'Prof K. Bhargav Kumar ',
     designation: 'Department of Mathematics',
     organisation: 'Birla Institute of Technology & Science, Pilani Hyderabad Campus',
@@ -106,7 +96,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 9,
-    photo: john,
+    photo: images.john,
     name: 'Dr John Rozario Jegaraj',
     designation: 'Technology Director & Senior Scientist (G)',
     organisation: 'DRDO , India',
@@ -114,7 +104,7 @@ const speakers: Speaker[] = [
   },
   {
     id: 4,
-    photo: 'src/images/sushmithap.jpg',
+    photo: images.sushmithap,
     name: 'Dr. Sushmitha. P',
     designation: 'Department of Mathematics',
     organisation: 'Indian Institute of Technology Patna',
