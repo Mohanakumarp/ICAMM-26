@@ -91,26 +91,34 @@ const technicalCommittee = [
     position: ''
   },
   {
-    photo: '/src/images/tech3.jpg',
-    name: 'Dr. Tech Three',
-    designation: 'Professor',
-    organisation: 'Tech University 3',
+    photo: '/src/images/rubell.jpg',
+    name: 'Dr. Rubell Marion Lincy George',
+    designation: 'Assistant Professor & Head - Department of Computer Science and Engineering',
+    organisation: 'IIIT Kottayam',
     knowMoreLink: '',
     position: ''
   },
   {
-    photo: '/src/images/tech4.jpg',
-    name: 'Dr. Tech Four',
-    designation: 'Professor',
-    organisation: 'Tech University 4',
+    photo: '/src/images/amalanjosephantony (1).jpg',
+    name: 'Dr. Amalan Joseph Antony A',
+    designation: 'Assistant Professor',
+    organisation: 'IIITDM Kancheepuram',
     knowMoreLink: '',
     position: ''
   },
   {
-    photo: '/src/images/tech5.jpg',
-    name: 'Dr. Tech Five',
-    designation: 'Professor',
-    organisation: 'Tech University 5',
+    photo: '/src/images/Drsgk-Manikandan.webp',
+    name: 'Dr. Manikandan SGK',
+    designation: 'Scientist',
+    organisation: 'ISRO',
+    knowMoreLink: '',
+    position: ''
+  },
+  {
+    photo: '/src/images/joseph.jpg',
+    name: 'Dr. Joseph Winston ',
+    designation: 'Scientist',
+    organisation: 'IGCAR',
     knowMoreLink: '',
     position: ''
   },
@@ -169,7 +177,118 @@ const Committee = () => {
           ))}
         </div>
       </section>
+
+      {/* Organising Committees with toggle buttons */}
+      <section className="committee-simple-section organising-committees-section">
+        
+        <OrganisingCommittees />
+      </section>
     </>
+  );
+};
+
+// Organising committees data and component
+const organisingCommitteesData: { title: string; members: string[] }[] = [
+  {
+    title: 'Programme Committee',
+    members: [
+      'Dr.B.Sridevi (Advisor)',
+      'Dr.R.Rajasudha (Convener)',
+      'Dr.M.Sumathi',
+      'Ms.S.T.Padmalakshmi',
+      'Dr.V.Deepa',
+    ],
+  },
+  {
+    title: 'Proceedings Committee',
+    members: [
+      'Dr.T.Vasanthi (Advisor)',
+      'Dr.A. Muthulakshmi (Convener)',
+      'Dr.C.K.Deena Merit',
+      'Dr.D.Kiruthika',
+      'Dr.R.Syama',
+      'Ms.R.Brindha',
+    ],
+  },
+  {
+    title: 'Funding and Finance Committee',
+    members: [
+      'Dr.M.Haridass (Advisor)',
+      'Dr.R.Deena (Convener)',
+      'Dr.P.Sathyakala',
+      'Dr.Ragi Krishnan',
+      'Ms.G.Tamilselvi',
+    ],
+  },
+  {
+    title: 'Hall Arrangements Committee',
+    members: [
+      'Dr.K.Sangavai (Advisor)',
+      'Dr.M. Bagyalakshmi (Convener)',
+      'Dr.P.Sathyakala',
+      'Dr.C.K.Deena Merit',
+      'Dr.D.Kiruthika',
+      'Dr.R.Syama',
+    ],
+  },
+  {
+    title: 'Registration Committee',
+    members: [
+      'Dr.R. Bindhu (Convener)',
+      'Dr.Ragi Krishnan',
+      'Dr.V.Deepa',
+      'Ms.G.Tamilselvi',
+      'Ms.R.Brindha',
+    ],
+  },
+  {
+    title: 'Publicity Committee',
+    members: [
+      'Dr.P.Muthukumar (Advisor)',
+      'Ms.M.Radhiga (Convener)',
+      'Dr.R.Syama',
+      'Dr.K.Anukiruthika',
+    ],
+  },
+  {
+    title: 'Hospitality Committee',
+    members: [
+      'Dr.P.Muthukumar (Advisor)',
+      'Dr.J.Narayanasamy (Convener)',
+      'Mr.K.Saravanan',
+      'Dr.J.Palraj',
+      'Dr.K.Anukiruthika',
+    ],
+  },
+];
+
+import React, { useState } from 'react';
+
+const OrganisingCommittees: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  return (
+    <div className="organising-committees">
+      {organisingCommitteesData.map((c, i) => (
+        <div className="organising-committee" key={c.title}>
+          <button
+            className="org-committee-toggle"
+            onClick={() => setOpenIndex(openIndex === i ? null : i)}
+            aria-expanded={openIndex === i}
+          >
+            {c.title}
+            <span className="org-toggle-indicator">{openIndex === i ? '−' : '+'}</span>
+          </button>
+          {openIndex === i && (
+            <ul className="org-committee-members">
+              {c.members.map((m) => (
+                <li key={m}>{m}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
+    </div>
   );
 };
 
