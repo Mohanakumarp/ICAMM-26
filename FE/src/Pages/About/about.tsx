@@ -2,6 +2,7 @@ import './about.css';
 import CollegeImg from '../../Assets/College.png';
 import DepartmentImg from '../../Assets/Department.png';
 import ConferenceImg from '../../Assets/logo.png';
+import VisionImg from '../../Assets/image.png';
 
 const About = () => {
   return (
@@ -10,47 +11,47 @@ const About = () => {
         <h1 className="section-title">About</h1>
         
         {/* College Section */}
-        <div className="about-card college">
+        <div className="about-card college image-left">
           <div className="about-card-header">
+            <div className="about-image-container">
+              <img
+                src={CollegeImg}
+                alt="PSG College of Technology"
+                className="about-image"
+              />
+            </div>
             <div className="about-text-content">
               <h2 className="about-heading">About the College</h2>
               <h3 className="about-subheading">PSG College of Technology</h3>
               <div className="about-content">
                 <p>
                   PSG College of Technology (PSG CT), established in 1951 by
-PSG & Sons' Charities, is an ISO 9001:2015 certified
-autonomous institution affiliated with Anna University,
-Chennai. This year marks a significant milestone as PSG
-College of Technology celebrates its Platinum Jubilee,
-coinciding with the Centenary Year of PSG & Sons' Charities,
-the founding trust renowned for its contributions to
-education and industry. PSG CT offers 21 undergraduates and
-24 postgraduate programmes across Engineering and
-Technology, Computer Applications, Management Sciences,
-and Basic and Advanced Sciences. PSG CT has built a strong
-network with industries, research organizations, alumni, and
-entrepreneurs, fostering innovation and collaboration. The
-institution has received national recognition, ranking second
-in the ATAL Ranking of Institutions on Innovation
-Achievements (ARIIA) under the Government and
-Government-Aided Technical Institutions category by the
-Ministry of Education, Government of India in 2021, and being
-awarded the Best Industry-Linked Institution by AICTE-CII in
-2012. Further, during India's G20 Presidency in 2022, PSG CT
-was chosen as one of 75 leading educational institutions in
-the country to conduct special lectures, student exchange
-programmes, and academic and cultural activities to promote
-awareness of the G20 agenda among students and the
-academic community.</p>
+                  PSG & Sons' Charities, is an ISO 9001:2015 certified
+                  autonomous institution affiliated with Anna University,
+                  Chennai. This year marks a significant milestone as PSG
+                  College of Technology celebrates its Platinum Jubilee,
+                  coinciding with the Centenary Year of PSG & Sons' Charities,
+                  the founding trust renowned for its contributions to
+                  education and industry. PSG CT offers 21 undergraduates and
+                  24 postgraduate programmes across Engineering and
+                  Technology, Computer Applications, Management Sciences,
+                  and Basic and Advanced Sciences. PSG CT has built a strong
+                  network with industries, research organizations, alumni, and
+                  entrepreneurs, fostering innovation and collaboration. The
+                  institution has received national recognition, ranking second
+                  in the ATAL Ranking of Institutions on Innovation
+                  Achievements (ARIIA) under the Government and
+                  Government-Aided Technical Institutions category by the
+                  Ministry of Education, Government of India in 2021, and being
+                  awarded the Best Industry-Linked Institution by AICTE-CII in
+                  2012. Further, during India's G20 Presidency in 2022, PSG CT
+                  was chosen as one of 75 leading educational institutions in
+                  the country to conduct special lectures, student exchange
+                  programmes, and academic and cultural activities to promote
+                  awareness of the G20 agenda among students and the
+                  academic community.
+               </p>
               </div>
-            </div>
-            <div className="about-image-container">
-              <img
-              src={CollegeImg}
-              alt="PSG College of Technology"
-              className="about-image"
-              style={{ border: '1px solid #136AD5' }}
-              />
             </div>
           </div>
         </div>
@@ -63,38 +64,46 @@ academic community.</p>
               <h3 className="about-subheading">Department of Mathematics</h3>
               <div className="about-content">
                 <p>
-                 Since 1951, the Department of Mathematics at PSG College
-of Technology continues to impart mathematical skill and
-analytical thinking to all Engineering and Science graduates
-of this institution. Over the past 7 decades with the highest
-standards in both research and teaching, it has seen a
-phenomenal growth and success. The department is
-equipped with 28 dedicated faculty as facilitators with a
-strong research base. So far, the department has produced
-44 doctorates in the field of Applied and Pure Mathematics.
-Several outreach events, including conferences, workshops,
-seminars, and symposiums on a wide range of topics, are
-organized by the department. The department also trains
-engineering students in strong mathematical background to
-enhance and apply their skills to find solutions to their field
-specific problems. An appreciable number of research
-articles with Scopus and SCI indexes are published annually
-in publications that are associated with the department. The
-department is actively involved in undertaking sponsored
-research activities from various funding organizations like
-CSIR, DRDO, DST, AICTE, UGC, SERB and the like.
+                  Since 1951, the Department of Mathematics at PSG College
+                  of Technology continues to impart mathematical skill and
+                  analytical thinking to all Engineering and Science graduates
+                  of this institution. Over the past 7 decades with the highest
+                  standards in both research and teaching, it has seen a
+                  phenomenal growth and success. The department is
+                  equipped with 28 dedicated faculty as facilitators with a
+                  strong research base. So far, the department has produced
+                  44 doctorates in the field of Applied and Pure Mathematics.
+                  Several outreach events, including conferences, workshops,
+                  seminars, and symposiums on a wide range of topics, are
+                  organized by the department. The department also trains
+                  engineering students in strong mathematical background to
+                  enhance and apply their skills to find solutions to their field
+                  specific problems. An appreciable number of research
+                  articles with Scopus and SCI indexes are published annually
+                  in publications that are associated with the department. The
+                  department is actively involved in undertaking sponsored
+                  research activities from various funding organizations like
+                  CSIR, DRDO, DST, AICTE, UGC, SERB and the like.
                 </p>
               </div>
             </div>
             <div className="about-image-container">
-              <img src={DepartmentImg} alt="Department of Mathematics" className="about-image" style={{ border: '1px solid #136AD5' }} />
+              <img
+              src={DepartmentImg}
+              alt="Department of Mathematics"
+              className="about-image"
+              style={{ width: '280px', height: 'auto' }}
+              />
             </div>
           </div>
         </div>
 
         {/* Vision and Mission Section */}
-        <div className="about-card vision-mission">
+        <div className="about-card vision-mission image-left">
           <div className="about-card-header">
+            <div className="about-image-container">
+              <img src={VisionImg} alt="Vision and Mission" className="about-image" style={{ width: '350px', height: 'auto' }} />
+            </div>
             <div className="about-text-content">
               <h2 className="about-heading">Vision and Mission</h2>
               <h3 className="about-subheading">Department of Mathematics</h3>
@@ -164,7 +173,7 @@ CSIR, DRDO, DST, AICTE, UGC, SERB and the like.
               </div>
             </div>
             <div className="about-image-container">
-              <img src={ConferenceImg} alt="ICAMM'26 Conference" className="about-image" style={{ border: '1px solid #136AD5' }} />
+              <img src={ConferenceImg} alt="ICAMM'26 Conference" className="about-image" style={{ width: '350px', height: 'auto' }}/>
             </div>
           </div>
         </div>
