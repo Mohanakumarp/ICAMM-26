@@ -64,52 +64,25 @@ const Dates: React.FC = () => {
           </p>
         </div>
 
-        <div className="dates-timeline">
-          {importantDates.map((dateItem, index) => (
-            <div 
-              key={dateItem.id} 
-              className={`date-card ${dateItem.color} ${dateItem.status}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="date-card-inner">
-                <div className="date-icon-container">
-                  <span className="date-icon">{dateItem.icon}</span>
-                  <div className="icon-pulse"></div>
-                </div>
-                
-                <div className="date-content">
-                  <h3 className="date-title">{dateItem.title}</h3>
-                  <div className="date-info">
-                    <div className="main-date">
-                      <span className="date-label">Deadline:</span>
-                      <span className="date-value">{dateItem.date}</span>
-                    </div>
-                    {dateItem.extended && (
-                      <div className="extended-date">
-                        <span className="extended-label">Extended:</span>
-                        <span className="extended-value">{dateItem.extended}</span>
-                      </div>
-                    )}
-                  </div>
-                  <p className="date-description">{dateItem.description}</p>
-                </div>
-
-                <div className="date-status-indicator">
-                  <div className={`status-dot ${dateItem.status}`}></div>
-                  <span className="status-text">
-                    {dateItem.status === 'open' ? 'Open' : 'Upcoming'}
-                  </span>
-                </div>
-              </div>
-
-              {/* Card decorative elements */}
-              <div className="card-decoration">
-                <div className="decoration-circle circle-1"></div>
-                <div className="decoration-circle circle-2"></div>
-                <div className="decoration-triangle"></div>
-              </div>
-            </div>
-          ))}
+        <div className="dates-table-wrapper">
+          <table className="dates-table">
+            <thead>
+              <tr>
+                <th>Event</th>
+                <th>Deadline</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {importantDates.map((d) => (
+                <tr key={d.id} className={`${d.color}`}>
+                  <td className="td-title">{d.title}</td>
+                  <td className="td-date">{d.date}</td>
+                  <td className="td-desc">{d.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         {/* Program Schedule Section */}
