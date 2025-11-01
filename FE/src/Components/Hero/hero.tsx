@@ -124,7 +124,16 @@ const Hero: React.FC = () => {
             <div className="main-logo-container">
               <img src={logo} alt="ICAMM Logo" className="main-logo" />
             </div>
-            <h3 className="conference-name">ICAMM 2026</h3>
+            <h3
+              className="conference-name"
+              style={{
+                color: '#05283c', // dark teal for strong contrast against translucent white
+                fontWeight: 700,
+                textShadow: '0 1px 3px rgba(255,255,255,0.35)'
+              }}
+            >
+              ICAMM 2026
+            </h3>
             <h1 className="conference-title">SEVENTH INTERNATIONAL CONFERENCE ON</h1>
             <h2 className="conference-theme">APPLIED MATHEMATICAL MODELS</h2>
             <p className="conference-dates">July 8 - 10, 2026</p>
