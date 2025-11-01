@@ -2,7 +2,17 @@ import ProfileCardSimple from './profilecardSimple';
 import './committee.css';
 import * as images from '../../images';
 
-const committeeMembers = [
+type Member = {
+  photo: string | undefined;
+  name: string;
+  designation: string;
+  organisation: string;
+  knowMoreLink: string;
+  position: string;
+  showPhoto?: boolean;
+};
+
+const committeeMembers: Member[] = [
   {
     photo: images.trustee,
     name: 'Shri L Gopalakrishnan',
@@ -22,13 +32,14 @@ const committeeMembers = [
   {
     photo: images.hod_maths,
     name: 'Dr C Porkodi',
-    designation: 'Professor and Head, Department of Mathematics',
+    designation: 'Professor and Head , Department of Mathematics',
     organisation: 'PSG College of Technology',
     knowMoreLink: '',
     position: 'CONVENOR'
   },
   {
-    photo: images.rsl,
+    photo: '',
+    showPhoto: false,
     name: 'Dr R Subalakshmi',
     designation: 'Assistant Professor (Sl. Gr.), Department of Mathematics',
     organisation: 'PSG College of Technology',
@@ -38,10 +49,10 @@ const committeeMembers = [
   // Add more members as needed
 ];
 
-
-const advisoryCommittee = [
+const advisoryCommittee: Member[] = [
   {
     photo: images.john,
+    showPhoto: false,
     name: 'Dr. John Rozario Jegaraj',
     designation: 'Technology Director & Senior Scientist (G) ',
     organisation: 'DRDO , India',
@@ -50,6 +61,7 @@ const advisoryCommittee = [
   },
   {
     photo: images.pandian,
+    showPhoto: false,
     name: 'Dr. Pandian P.S.',
     designation: 'Scientist, Defence Bioengineering and Electromedical Laboratory',
     organisation: 'DRDO , India',
@@ -58,6 +70,7 @@ const advisoryCommittee = [
   },
   {
     photo: images.sankar,
+    showPhoto: false,
     name: 'Dr. CH. N. A. B. Sankar',
     designation: 'Scientist, Research Centre Imarat',
     organisation: 'DRDO , India',
@@ -66,6 +79,7 @@ const advisoryCommittee = [
   },
   {
     photo: images.arumuganathan,
+    showPhoto: false,
     name: 'Dr. Arumuganathan R',
     designation: 'Professor , Department of Mathematics',
     organisation: 'PSG College of Technology',
@@ -74,9 +88,10 @@ const advisoryCommittee = [
   },
 ];
 
-const technicalCommittee = [
+const technicalCommittee: Member[] = [
   {
     photo: images.mahesh,
+    showPhoto: false,
     name: 'Dr. Maheshanand',
     designation: 'Professor and Head of the Department of Mathematics',
     organisation: 'IIIT Roorkee',
@@ -85,6 +100,7 @@ const technicalCommittee = [
   },
   {
     photo: images.abhay,
+    showPhoto: false,
     name: 'Dr. Abhay Kumar Singh',
     designation: 'Associate Professor, Department of Mathematics and Computing',
     organisation: 'IIT (ISM), Dhanbad',
@@ -93,6 +109,7 @@ const technicalCommittee = [
   },
   {
     photo: images.rubell,
+    showPhoto: false,
     name: 'Dr. Rubell Marion Lincy George',
     designation: 'Assistant Professor & Head - Department of Computer Science and Engineering',
     organisation: 'IIIT Kottayam',
@@ -101,6 +118,7 @@ const technicalCommittee = [
   },
   {
     photo: images.amalanjosephantony_1,
+    showPhoto: false,
     name: 'Dr. Amalan Joseph Antony A',
     designation: 'Assistant Professor',
     organisation: 'IIITDM Kancheepuram',
@@ -109,6 +127,7 @@ const technicalCommittee = [
   },
   {
     photo: images.drsgkManikandan,
+    showPhoto: false,
     name: 'Dr. Manikandan SGK',
     designation: 'Scientist',
     organisation: 'ISRO',
@@ -117,6 +136,7 @@ const technicalCommittee = [
   },
   {
     photo: images.joseph,
+    showPhoto: false,
     name: 'Dr. Joseph Winston ',
     designation: 'Scientist',
     organisation: 'IGCAR',
@@ -126,20 +146,67 @@ const technicalCommittee = [
 ];
 
 const Committee = () => {
+  // For layout: put PATRON, CO - PATRON and CONVENOR in a single top row
+  const topPositions = ['PATRON', 'CO - PATRON', 'CONVENOR'];
+  const topMembers = committeeMembers.filter((m) => topPositions.includes(m.position));
+  const secretaryMembers = committeeMembers.filter((m) => m.position === 'ORGANISING SECRETARY');
+  const otherMembers = committeeMembers.filter(
+    (m) => !topPositions.includes(m.position) && m.position !== 'ORGANISING SECRETARY'
+  );
+
   return (
     <>
       <section className="committee-simple-section">
         <h1 className="section-title">Organising Committee</h1>
+
+        {/* Top row with Chief Patron / Patron / Convenor */}
+        {topMembers.length > 0 && (
+          <div className="organising-top-row">
+            {topMembers.map((member, idx) => (
+              <ProfileCardSimple
+                key={`top-${idx}`}
+                photo={member.photo}
+                name={member.name}
+                designation={member.designation}
+                organisation={member.organisation}
+                knowMoreLink={member.knowMoreLink}
+                position={member.position}
+                showPhoto={member.showPhoto}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Organising Secretary (centered) */}
+        {secretaryMembers.length > 0 && (
+          <div className="organising-secretary-row">
+            {secretaryMembers.map((member, idx) => (
+              <ProfileCardSimple
+                key={`secretary-${idx}`}
+                photo={member.photo}
+                name={member.name}
+                designation={member.designation}
+                organisation={member.organisation}
+                knowMoreLink={member.knowMoreLink}
+                position={member.position}
+                showPhoto={member.showPhoto}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Remaining organising members */}
         <div className="committee-simple-grid organising-committee-grid">
-          {committeeMembers.map((member, idx) => (
+          {otherMembers.map((member, idx) => (
             <ProfileCardSimple
-              key={idx}
+              key={`other-${idx}`}
               photo={member.photo}
               name={member.name}
               designation={member.designation}
               organisation={member.organisation}
               knowMoreLink={member.knowMoreLink}
               position={member.position}
+              showPhoto={member.showPhoto}
             />
           ))}
         </div>
@@ -157,6 +224,7 @@ const Committee = () => {
               organisation={member.organisation}
               knowMoreLink={member.knowMoreLink}
               position={member.position}
+              showPhoto={member.showPhoto}
             />
           ))}
         </div>
@@ -174,6 +242,7 @@ const Committee = () => {
               organisation={member.organisation}
               knowMoreLink={member.knowMoreLink}
               position={member.position}
+              showPhoto={member.showPhoto}
             />
           ))}
         </div>
@@ -263,30 +332,20 @@ const organisingCommitteesData: { title: string; members: string[] }[] = [
   },
 ];
 
-import React, { useState } from 'react';
+import React from 'react';
 
 const OrganisingCommittees: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
+  // Render all organising committees as a matrix/grid with title and member list
   return (
-    <div className="organising-committees">
-      {organisingCommitteesData.map((c, i) => (
-        <div className="organising-committee" key={c.title}>
-          <button
-            className="org-committee-toggle"
-            onClick={() => setOpenIndex(openIndex === i ? null : i)}
-            aria-expanded={openIndex === i}
-          >
-            {c.title}
-            <span className="org-toggle-indicator">{openIndex === i ? '−' : '+'}</span>
-          </button>
-          {openIndex === i && (
-            <ul className="org-committee-members">
-              {c.members.map((m) => (
-                <li key={m}>{m}</li>
-              ))}
-            </ul>
-          )}
+    <div className="organising-committees-grid">
+      {organisingCommitteesData.map((c) => (
+        <div className="organising-committee-panel" key={c.title}>
+          <div className="org-panel-title">{c.title}</div>
+          <ul className="org-committee-members">
+            {c.members.map((m) => (
+              <li key={m}>{m}</li>
+            ))}
+          </ul>
         </div>
       ))}
     </div>

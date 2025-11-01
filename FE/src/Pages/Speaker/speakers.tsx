@@ -15,12 +15,12 @@ interface Speaker {
 
 const speakers: Speaker[] = [
   {
-    id: 6,
-    photo: images.arnfried,
-    name: 'Prof. Arnfried Kemnitz',
-    designation: 'Department of Mathematics',
-    organisation: 'Technische Universität Braunschweig, Germany',
-    link: 'http://www.icm.tu-bs.de/~akemnitz/'
+    id: 8,
+    photo: images.sujatha,
+    name: 'Dr Sujatha Ramdorai',
+    designation: 'Mathematics Department',
+    organisation: 'University of British Columbia, Canada',
+    link: 'https://www.math.ubc.ca/~sujatha/'
   },
   {
     id: 7,
@@ -30,14 +30,7 @@ const speakers: Speaker[] = [
     organisation: 'University of Newcastle , Australia',
     link: 'https://www.newcastle.edu.au/profile/asadi-srinivasulu'
   },
-  {
-    id: 8,
-    photo: images.sujatha,
-    name: 'Dr Sujatha Ramdorai',
-    designation: 'Mathematics Department',
-    organisation: 'University of British Columbia, Canada',
-    link: 'https://www.math.ubc.ca/~sujatha/'
-  },
+  
   {
     id: 1,
     photo: images.rajeshkumar,
@@ -117,8 +110,8 @@ const Speakers: React.FC = () => {
     <div className="page-wrapper">
       <div className="speakers-container">
         <div className="speakers-header">
-          <h1 className="speakers-title">KEYNOTE SPEAKERS</h1>
-          <p className="speakers-subtitle">Meet our distinguished keynote speakers who will share their expertise</p>
+          <h1 className="speakers-title">PLENARY SPEAKERS</h1>
+          <p className="speakers-subtitle">Meet our distinguished plenary speakers who will share their expertise</p>
         </div>
       
       <div className="speakers-grid">

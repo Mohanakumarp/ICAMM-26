@@ -2,23 +2,38 @@ import React from 'react';
 import './profilecardSimple.css';
 
 interface ProfileCardSimpleProps {
-  photo: string;
+  photo?: string;
   name: string;
   designation: string;
   organisation: string;
   knowMoreLink?: string;
   position?: string;
+  showPhoto?: boolean;
 }
 
-const ProfileCardSimple: React.FC<ProfileCardSimpleProps> = ({ photo, name, designation, organisation, knowMoreLink, position }) => {
+const ProfileCardSimple: React.FC<ProfileCardSimpleProps> = ({ photo, name, designation, organisation, knowMoreLink, position, showPhoto = true }) => {
+  const getInitials = (fullName: string) => {
+    if (!fullName) return '';
+    const parts = fullName.trim().split(' ');
+    const initials = parts.slice(0, 2).map(p => p.charAt(0).toUpperCase()).join('');
+    return initials;
+  };
   return (
-    <div className="profile-card-simple">
+    <div className={`profile-card-simple ${showPhoto === false ? 'no-photo-section' : ''}`}>
       {position && (
         <div className="profile-position-header">{position}</div>
       )}
-      <div className="profile-photo-simple-container">
-        <img src={photo} alt={name} className="profile-photo-simple" />
-      </div>
+      {showPhoto !== false && (
+        <div className="profile-photo-simple-container">
+          {photo ? (
+            <img src={photo} alt={name} className="profile-photo-simple" />
+          ) : (
+            <div className="profile-no-photo" aria-hidden>
+              {getInitials(name)}
+            </div>
+          )}
+        </div>
+      )}
       <div className="profile-info-simple">
         <h2 className="profile-name-simple">{name}</h2>
         <p className="profile-designation-simple">{designation}</p>

@@ -130,6 +130,68 @@
   margin: 0 auto 60px auto;
 }
 
+/* Table layout for important dates */
+.dates-table-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  overflow-x: auto;
+}
+
+.dates-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.08);
+}
+
+.dates-table thead {
+  background: linear-gradient(90deg, #eef2ff, #f1f5f9);
+}
+
+.dates-table th,
+.dates-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.dates-table th {
+  font-weight: 800;
+  color: #0f4f92;
+  font-size: 0.95rem;
+}
+
+.dates-table tbody tr:nth-child(even) {
+  background: #fbfdff;
+}
+
+.dates-table .td-date {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* status column removed - no styles needed */
+
+/* Color accents based on card color classes for quick visual */
+.dates-table tr.blue .td-date { color: #1e40af; }
+.dates-table tr.green .td-date { color: #047857; }
+.dates-table tr.orange .td-date { color: #b45309; }
+.dates-table tr.purple .td-date { color: #6d28d9; }
+
+@media (max-width: 768px) {
+  .dates-table th, .dates-table td { padding: 10px 12px; }
+  .dates-table thead { display: none; }
+  .dates-table tbody tr { display: block; margin-bottom: 12px; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 18px rgba(2,6,23,0.05); }
+  .dates-table td { display: flex; justify-content: space-between; padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
+  .dates-table td:before { content: attr(data-label); font-weight: 700; color: #0f4f92; margin-right: 8px; }
+  .dates-table .td-title:before { content: 'Event:'; }
+  .dates-table .td-date:before { content: 'Deadline:'; }
+  .dates-table .td-desc:before { content: 'Description:'; }
+}
+
 .date-card {
   background: #ffffff;
   border-radius: 20px;

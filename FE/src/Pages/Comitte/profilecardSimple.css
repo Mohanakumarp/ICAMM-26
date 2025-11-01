@@ -39,6 +39,30 @@
   border-radius: 50%;
 }
 
+/* Placeholder when no photo provided */
+.profile-no-photo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #eef7ff, #dff0ff);
+  color: #0f4f92;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 1px;
+}
+
+/* Variant when the photo section is intentionally removed */
+.profile-card-simple.no-photo-section {
+  padding-top: 18px; /* tighter top padding when no photo block */
+}
+
+.profile-card-simple.no-photo-section .profile-info-simple {
+  margin-top: 4px;
+}
+
 .profile-info-simple {
   text-align: center;
   width: 100%;
@@ -64,6 +88,7 @@
   color: #136AD5;
   margin: 0 0 14px 0;
   font-weight: 500;
+  white-space: pre-line; /* allow '\n' in organisation string to render as line break */
 }
 
 .know-more-btn-simple {
