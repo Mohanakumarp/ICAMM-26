@@ -53,7 +53,7 @@ const advisoryCommittee: Member[] = [
   {
     photo: images.john,
     showPhoto: false,
-    name: 'Dr. John Rozario Jegaraj',
+    name: 'Dr.John Rozario Jegaraj',
     designation: 'Technology Director & Senior Scientist (G) ',
     organisation: 'DRDO , India',
     knowMoreLink: '',
@@ -62,7 +62,7 @@ const advisoryCommittee: Member[] = [
   {
     photo: images.pandian,
     showPhoto: false,
-    name: 'Dr. Pandian P.S.',
+    name: 'Dr.Pandian P.S.',
     designation: 'Scientist, Defence Bioengineering and Electromedical Laboratory',
     organisation: 'DRDO , India',
     knowMoreLink: '',
@@ -71,7 +71,7 @@ const advisoryCommittee: Member[] = [
   {
     photo: images.sankar,
     showPhoto: false,
-    name: 'Dr. CH. N. A. B. Sankar',
+    name: 'Dr.CH.N.A.B. Sankar',
     designation: 'Scientist, Research Centre Imarat',
     organisation: 'DRDO , India',
     knowMoreLink: '',
@@ -80,7 +80,7 @@ const advisoryCommittee: Member[] = [
   {
     photo: images.arumuganathan,
     showPhoto: false,
-    name: 'Dr. Arumuganathan R',
+    name: 'Dr.Arumuganathan',
     designation: 'Professor , Department of Mathematics',
     organisation: 'PSG College of Technology',
     knowMoreLink: '',
