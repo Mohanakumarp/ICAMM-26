@@ -9,14 +9,15 @@
     padding: 0 2vw;
   }
   .profile-card-simple {
-    max-width: 98vw;
+    /* max-width: 98vw; */
     min-width: 0;
     margin: 10px auto;
-    padding: 10vw 2vw 10vw 2vw;
+    /* padding: 10vw 2vw 10vw 2vw; */
   }
 }
 /* Responsive Technical Committee grid: 3 columns (desktop), 2 (tablet), 1 (mobile) */
 .technical-committee-grid {
+  /* padding: 0px; */
   display: grid;
   grid-template-columns: repeat(4, minmax(220px, 1fr));
   gap: 40px 30px;
@@ -32,6 +33,23 @@
 .technical-committee-grid .profile-card-simple {
   width: 100%;
   max-width: 360px; /* keep cards visually balanced for 4-up layout */
+}
+
+/* Technical Committee layout - 3 in first row, 3 in second row */
+.technical-committee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Items 4, 5, 6 go to second row */
+.technical-committee-grid > :nth-child(4),
+.technical-committee-grid > :nth-child(5),
+.technical-committee-grid > :nth-child(6) {
+  grid-column: auto;
 }
 
 @media (max-width: 1100px) {
@@ -57,13 +75,14 @@
 .advisory-committee-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(220px, 1fr));
-  gap: 40px 30px;
+  gap: 70px 70px;
   justify-items: center;
   align-items: stretch;
   width: 100%;
   max-width: 1400px; /* accommodate 4 columns */
   margin: 0 auto;
   box-sizing: border-box;
+
 }
 
 @media (max-width: 1400px) {
@@ -88,6 +107,41 @@
     padding: 0 12px;
   }
 }
+
+/* Advisory Committee horizontal layout */
+.advisory-committee-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: visible;
+  gap: 3.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.advisory-committee-grid > * {
+  flex: 0 0 auto;
+  min-width: 250px;
+  max-width: 280px;
+}
+
+@media (max-width: 1400px) {
+  .advisory-committee-grid > * {
+    min-width: 220px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .advisory-committee-grid {
+    flex-wrap: wrap;
+  }
+  
+  .advisory-committee-grid > * {
+    min-width: 220px;
+    max-width: 250px;
+  }
+}
+
 /* 2 cards per row for organising committee */
 .organising-committee-grid {
   display: grid;
@@ -192,12 +246,12 @@
   display: grid;
   /* larger minimum column so panels appear bigger on wide screens */
   grid-template-columns: repeat(3, minmax(260px, 1fr));
-  gap: 24px;
+  gap: 55px;
   width: 100%;
   max-width: 1360px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 12px 0 28px 0;
+  padding: 70px 0 28px 0;
 }
 
 .organising-committee-panel {

@@ -213,7 +213,7 @@ const Committee = () => {
       </section>
 
       <section className="committee-simple-section">
-        <h1 className="section-title">Advisory Committee</h1>
+        <h1 className="section-title" style={{ marginTop: 50 }}> Advisory Committee</h1>
         <div className="committee-simple-grid advisory-committee-grid">
           {advisoryCommittee.map((member, idx) => (
             <ProfileCardSimple
@@ -231,7 +231,7 @@ const Committee = () => {
       </section>
 
       <section className="committee-simple-section">
-        <h1 className="section-title">Technical Committee</h1>
+        <h1 className="section-title" style={{ marginTop: 75 }}>Technical Committee</h1>
         <div className="committee-simple-grid technical-committee-grid">
           {technicalCommittee.map((member, idx) => (
             <ProfileCardSimple
