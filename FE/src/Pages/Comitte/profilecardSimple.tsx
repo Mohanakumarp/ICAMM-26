@@ -36,7 +36,14 @@ const ProfileCardSimple: React.FC<ProfileCardSimpleProps> = ({ photo, name, desi
       )}
       <div className="profile-info-simple">
         <h2 className="profile-name-simple">{name}</h2>
-        <p className="profile-designation-simple">{designation}</p>
+        <p className="profile-designation-simple">
+          {designation.split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              {index < designation.split('\n').length - 1 && <br />}
+            </React.Fragment>
+          ))}
+        </p>
         <p className="profile-organisation-simple">{organisation}</p>
         {knowMoreLink && (
           <a
