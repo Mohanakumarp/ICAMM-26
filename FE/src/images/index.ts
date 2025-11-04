@@ -15,6 +15,7 @@ import rubellImg from './rubell.jpg';
 import amalanjosephantony1Img from './amalanjosephantony (1).jpg';
 import drsgkManikandanImg from './Drsgk-Manikandan.webp';
 import josephImg from './joseph.jpg';
+import winstonImg from './winston.jpg';
 
 import bhargavImg from './bhargav.jpg';
 import kavikumarImg from './kavikumar.jpg';
@@ -44,6 +45,7 @@ export const rubell = rubellImg;
 export const amalanjosephantony_1 = amalanjosephantony1Img;
 export const drsgkManikandan = drsgkManikandanImg;
 export const joseph = josephImg;
+export const winston = winstonImg;
 
 export const bhargav = bhargavImg;
 export const kavikumar = kavikumarImg;
@@ -74,6 +76,7 @@ export default {
   amalanjosephantony_1,
   drsgkManikandan,
   joseph,
+  winston,
   bhargav,
   kavikumar,
   sujatha,

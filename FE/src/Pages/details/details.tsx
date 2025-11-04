@@ -90,17 +90,6 @@ const Details: React.FC = () => {
                 </div>
               </div>
               
-              <div className="journals-section">
-                <h3>Associated Journals</h3>
-                <div className="journals-grid">
-                  {journals.map((journal, index) => (
-                    <div key={index} className="journal-card">
-                      <div className="journal-icon">📄</div>
-                      <p>{journal}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
               
               <div className="important-notes">
                 <h3>Important Notes</h3>

@@ -23,53 +23,20 @@ const speakers: Speaker[] = [
     link: 'https://www.math.ubc.ca/~sujatha/'
   },
   {
-    id: 7,
-    photo: images.asadis,
-    name: 'Dr Asadi Srinivasulu',
-    designation: 'IT Professor',
-    organisation: 'University of Newcastle , Australia',
-    link: 'https://www.newcastle.edu.au/profile/asadi-srinivasulu'
-  },
-  
-  {
-    id: 1,
-    photo: images.rajeshkumar,
-    name: 'Prof. Rajesh Kumar',
-    designation: 'Dept. of Electrical Engg',
-    organisation: 'MNIT Jaipur and Dept. of Health Science, Univ. of Johannesburg, South Africa',
-    link: 'https://www.researchgate.net/profile/Rajesh-Kumar-174'
-  },
-  {
-    id: 5,
-    photo: images.kavikumar,
-    name: 'Dr Kavikumar Jacob',
-    designation: 'Department of Mathematics and Statistics',
-    organisation: 'Universiti Tun Hussein Onn Malaysia',
-    link: 'https://www.uthm.edu.my/en/staff/kavikumar-jacob-4933'
-  },
-  {
-    id: 10,
-    photo: images.oscar,
-    name: 'Prof. Oscar Castillo',
-    designation: 'Professor of Computer Science',
-    organisation: 'Tijuana Institute of Technology, Tijuana, Mexico',
-    link: 'https://www.researchgate.net/profile/Oscar-Castillo-2'
-  },
-  {
-    id: 11,
-    photo: images.selvanathan,
-    name: 'Dr Selvanathan Sivalingam',
-    designation: 'Technology Leader – Digitalization',
-    organisation: 'Trondheim, Trøndelag, Norway',
-    link: 'https://www.linkedin.com/in/selvanathansivalingam/'
-  },
-  {
     id: 12,
     photo: images.apoorva,
     name: 'Dr Apoorva khare',
     designation: 'Associate Professor, Department of Mathematics',
     organisation: 'Indian Institute of Science, Bengaluru',
     link: 'https://math.iisc.ac.in/~apoorva/'
+  },
+  {
+    id: 7,
+    photo: images.asadis,
+    name: 'Dr Asadi Srinivasulu',
+    designation: 'IT Professor',
+    organisation: 'University of Newcastle , Australia',
+    link: 'https://www.newcastle.edu.au/profile/asadi-srinivasulu'
   },
   {
     id: 3,
@@ -94,6 +61,46 @@ const speakers: Speaker[] = [
     designation: 'Technology Director & Senior Scientist (G)',
     organisation: 'DRDO , India',
     link: 'https://www.drdo.gov.in/labs-establishments/research-centre-imarat-rci'
+  },
+  {
+    id: 9,
+    photo: images.winston,
+    name: 'Dr Joseph Winston',
+    designation: 'Scientist',
+    organisation: 'IGCAR , India',
+    link: 'https://in.linkedin.com/in/sjwinston'
+  },
+   {
+    id: 5,
+    photo: images.kavikumar,
+    name: 'Dr Kavikumar Jacob',
+    designation: 'Department of Mathematics and Statistics',
+    organisation: 'Universiti Tun Hussein Onn Malaysia',
+    link: 'https://www.uthm.edu.my/en/staff/kavikumar-jacob-4933'
+  },
+  {
+    id: 10,
+    photo: images.oscar,
+    name: 'Prof. Oscar Castillo',
+    designation: 'Professor of Computer Science',
+    organisation: 'Tijuana Institute of Technology, Tijuana, Mexico',
+    link: 'https://www.researchgate.net/profile/Oscar-Castillo-2'
+  },
+  {
+    id: 1,
+    photo: images.rajeshkumar,
+    name: 'Prof. Rajesh Kumar',
+    designation: 'Dept. of Electrical Engg',
+    organisation: 'MNIT Jaipur and Dept. of Health Science, Univ. of Johannesburg, South Africa',
+    link: 'https://www.researchgate.net/profile/Rajesh-Kumar-174'
+  },
+  {
+    id: 11,
+    photo: images.selvanathan,
+    name: 'Dr Selvanathan Sivalingam',
+    designation: 'Technology Leader – Digitalization',
+    organisation: 'Trondheim, Trøndelag, Norway',
+    link: 'https://www.linkedin.com/in/selvanathansivalingam/'
   },
   {
     id: 4,

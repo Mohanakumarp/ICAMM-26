@@ -14,7 +14,8 @@ type Member = {
 
 const committeeMembers: Member[] = [
   {
-    photo: images.trustee,
+    photo: '',
+    showPhoto: false,
     name: 'Shri L Gopalakrishnan',
     designation: 'Managing Trustee',
     organisation: "PSG & Sons' Charities Trust",
@@ -22,7 +23,8 @@ const committeeMembers: Member[] = [
     position: 'PATRON'
   },
   {
-    photo: images.principal,
+    photo: '',
+    showPhoto: false,
     name: 'Dr K Prakasan',
     designation: 'Principal',
     organisation: 'PSG College of Technology',
@@ -30,9 +32,10 @@ const committeeMembers: Member[] = [
     position: 'CO - PATRON'
   },
   {
-    photo: images.hod_maths,
+    photo: '',
+    showPhoto: false,
     name: 'Dr C Porkodi',
-    designation: 'Professor and Head , Department of Mathematics',
+    designation: 'Professor and Head,\nDepartment of Mathematics',
     organisation: 'PSG College of Technology',
     knowMoreLink: '',
     position: 'CONVENOR'
@@ -41,7 +44,7 @@ const committeeMembers: Member[] = [
     photo: '',
     showPhoto: false,
     name: 'Dr R Subalakshmi',
-    designation: 'Assistant Professor (Sl. Gr.), Department of Mathematics',
+    designation: 'Assistant Professor (Sl. Gr.), \nDepartment of Mathematics',
     organisation: 'PSG College of Technology',
     knowMoreLink: '',
     position: 'ORGANISING SECRETARY'
@@ -51,9 +54,18 @@ const committeeMembers: Member[] = [
 
 const advisoryCommittee: Member[] = [
   {
+    photo: images.arumuganathan,
+    showPhoto: false,
+    name: 'Dr R Arumuganathan',
+    designation: 'Professor , Department of Mathematics',
+    organisation: 'PSG College of Technology',
+    knowMoreLink: '',
+    position: ''
+  },
+  {
     photo: images.john,
     showPhoto: false,
-    name: 'Dr.John Rozario Jegaraj',
+    name: 'Dr John Rozario Jegaraj',
     designation: 'Technology Director & Senior Scientist (G) ',
     organisation: 'DRDO , India',
     knowMoreLink: '',
@@ -78,14 +90,15 @@ const advisoryCommittee: Member[] = [
     position: ''
   },
   {
-    photo: images.arumuganathan,
+    photo: images.sankar,
     showPhoto: false,
-    name: 'Dr.Arumuganathan',
-    designation: 'Professor , Department of Mathematics',
-    organisation: 'PSG College of Technology',
+    name: 'Dr Joseph Winston',
+    designation: 'Scientist',
+    organisation: 'IGCAR , Tamil Nadu',
     knowMoreLink: '',
     position: ''
   },
+  
 ];
 
 const technicalCommittee: Member[] = [
@@ -134,72 +147,20 @@ const technicalCommittee: Member[] = [
     knowMoreLink: '',
     position: ''
   },
-  {
-    photo: images.joseph,
-    showPhoto: false,
-    name: 'Dr. Joseph Winston ',
-    designation: 'Scientist',
-    organisation: 'IGCAR',
-    knowMoreLink: '',
-    position: ''
-  },
 ];
 
 const Committee = () => {
   // For layout: put PATRON, CO - PATRON and CONVENOR in a single top row
-  const topPositions = ['PATRON', 'CO - PATRON', 'CONVENOR'];
-  const topMembers = committeeMembers.filter((m) => topPositions.includes(m.position));
-  const secretaryMembers = committeeMembers.filter((m) => m.position === 'ORGANISING SECRETARY');
-  const otherMembers = committeeMembers.filter(
-    (m) => !topPositions.includes(m.position) && m.position !== 'ORGANISING SECRETARY'
-  );
-
   return (
     <>
       <section className="committee-simple-section">
         <h1 className="section-title">Organising Committee</h1>
 
-        {/* Top row with Chief Patron / Patron / Convenor */}
-        {topMembers.length > 0 && (
-          <div className="organising-top-row">
-            {topMembers.map((member, idx) => (
-              <ProfileCardSimple
-                key={`top-${idx}`}
-                photo={member.photo}
-                name={member.name}
-                designation={member.designation}
-                organisation={member.organisation}
-                knowMoreLink={member.knowMoreLink}
-                position={member.position}
-                showPhoto={member.showPhoto}
-              />
-            ))}
-          </div>
-        )}
-
-        {/* Organising Secretary (centered) */}
-        {secretaryMembers.length > 0 && (
-          <div className="organising-secretary-row">
-            {secretaryMembers.map((member, idx) => (
-              <ProfileCardSimple
-                key={`secretary-${idx}`}
-                photo={member.photo}
-                name={member.name}
-                designation={member.designation}
-                organisation={member.organisation}
-                knowMoreLink={member.knowMoreLink}
-                position={member.position}
-                showPhoto={member.showPhoto}
-              />
-            ))}
-          </div>
-        )}
-
-        {/* Remaining organising members */}
+        {/* All organizing committee members in 2-column grid */}
         <div className="committee-simple-grid organising-committee-grid">
-          {otherMembers.map((member, idx) => (
+          {committeeMembers.map((member, idx) => (
             <ProfileCardSimple
-              key={`other-${idx}`}
+              key={`committee-${idx}`}
               photo={member.photo}
               name={member.name}
               designation={member.designation}

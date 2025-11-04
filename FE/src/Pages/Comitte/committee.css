@@ -108,53 +108,54 @@
   }
 }
 
-/* Advisory Committee horizontal layout */
+/* Advisory Committee - 3 cards per row */
 .advisory-committee-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: visible;
-  gap: 3.5rem;
-  justify-content: center;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.advisory-committee-grid > * {
-  flex: 0 0 auto;
-  min-width: 250px;
-  max-width: 280px;
-}
-
-@media (max-width: 1400px) {
-  .advisory-committee-grid > * {
-    min-width: 220px;
-    max-width: 250px;
-  }
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .advisory-committee-grid {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 32px 20px;
+    max-width: 900px;
   }
-  
-  .advisory-committee-grid > * {
-    min-width: 220px;
-    max-width: 250px;
+}
+
+@media (max-width: 700px) {
+  .advisory-committee-grid {
+    grid-template-columns: 1fr;
+    gap: 20px 0;
+    max-width: 98vw;
+    padding: 0 12px;
   }
 }
 
 /* 2 cards per row for organising committee */
 .organising-committee-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px 30px;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 3rem 2.5rem;
   justify-items: center;
-  align-items: start;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-@media (max-width: 900px) {
+.organising-committee-grid > * {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
   .organising-committee-grid {
     grid-template-columns: 1fr;
-    gap: 24px 0;
+    gap: 2rem;
+    max-width: 400px;
   }
 }
 
