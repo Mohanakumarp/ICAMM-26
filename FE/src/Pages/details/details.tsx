@@ -12,12 +12,12 @@ const Details: React.FC = () => {
     { id: 'visa', title: 'Visa' }
   ];
 
-  const journals = [
-    'Journal of Fractional Calculus and Non-linear System',
-    'Journal of Mathematical Analysis and Modeling',
-    'Journal of Mathematical Control Sciences and Applications',
-    'SPRINGER NATURE publishing (under discussion)'
-  ];
+  // const journals = [
+  //   'Journal of Fractional Calculus and Non-linear System',
+  //   'Journal of Mathematical Analysis and Modeling',
+  //   'Journal of Mathematical Control Sciences and Applications',
+  //   'SPRINGER NATURE publishing (under discussion)'
+  // ];
 
   const renderContent = () => {
     switch (activeSection) {
