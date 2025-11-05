@@ -13,6 +13,7 @@
 }
 
 .section-title {
+  margin-top: 40px;
   text-align: center;
   font-size: var(--text-5xl, 3rem);
   font-weight: var(--font-bold, 700);
